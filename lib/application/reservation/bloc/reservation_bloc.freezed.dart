@@ -20,9 +20,6 @@ mixin _$ReservationEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(
-            GetAllAvailabelReservationRequest getAllAvailabelReservationRequest)
-        getAllReservation,
-    required TResult Function(
             GetSpecificReservationRequest getSpecificReservationRequest)
         getSpecificFilter,
   }) =>
@@ -30,10 +27,6 @@ mixin _$ReservationEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
     TResult? Function(
             GetSpecificReservationRequest getSpecificReservationRequest)?
         getSpecificFilter,
@@ -43,10 +36,6 @@ mixin _$ReservationEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
-    TResult Function(
             GetSpecificReservationRequest getSpecificReservationRequest)?
         getSpecificFilter,
     required TResult orElse(),
@@ -55,21 +44,18 @@ mixin _$ReservationEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllReservation value) getAllReservation,
     required TResult Function(_GetFilterdReservation value) getSpecificFilter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllReservation value)? getAllReservation,
     TResult? Function(_GetFilterdReservation value)? getSpecificFilter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllReservation value)? getAllReservation,
     TResult Function(_GetFilterdReservation value)? getSpecificFilter,
     required TResult orElse(),
   }) =>
@@ -133,9 +119,6 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(
-            GetAllAvailabelReservationRequest getAllAvailabelReservationRequest)
-        getAllReservation,
-    required TResult Function(
             GetSpecificReservationRequest getSpecificReservationRequest)
         getSpecificFilter,
   }) {
@@ -147,10 +130,6 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
-    TResult? Function(
             GetSpecificReservationRequest getSpecificReservationRequest)?
         getSpecificFilter,
   }) {
@@ -161,10 +140,6 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
     TResult Function(
             GetSpecificReservationRequest getSpecificReservationRequest)?
         getSpecificFilter,
@@ -180,7 +155,6 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllReservation value) getAllReservation,
     required TResult Function(_GetFilterdReservation value) getSpecificFilter,
   }) {
     return started(this);
@@ -190,7 +164,6 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllReservation value)? getAllReservation,
     TResult? Function(_GetFilterdReservation value)? getSpecificFilter,
   }) {
     return started?.call(this);
@@ -200,7 +173,6 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllReservation value)? getAllReservation,
     TResult Function(_GetFilterdReservation value)? getSpecificFilter,
     required TResult orElse(),
   }) {
@@ -213,168 +185,6 @@ class _$_Started implements _Started {
 
 abstract class _Started implements ReservationEvent {
   const factory _Started() = _$_Started;
-}
-
-/// @nodoc
-abstract class _$$_GetAllReservationCopyWith<$Res> {
-  factory _$$_GetAllReservationCopyWith(_$_GetAllReservation value,
-          $Res Function(_$_GetAllReservation) then) =
-      __$$_GetAllReservationCopyWithImpl<$Res>;
-  @useResult
-  $Res call(
-      {GetAllAvailabelReservationRequest getAllAvailabelReservationRequest});
-}
-
-/// @nodoc
-class __$$_GetAllReservationCopyWithImpl<$Res>
-    extends _$ReservationEventCopyWithImpl<$Res, _$_GetAllReservation>
-    implements _$$_GetAllReservationCopyWith<$Res> {
-  __$$_GetAllReservationCopyWithImpl(
-      _$_GetAllReservation _value, $Res Function(_$_GetAllReservation) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? getAllAvailabelReservationRequest = null,
-  }) {
-    return _then(_$_GetAllReservation(
-      getAllAvailabelReservationRequest: null ==
-              getAllAvailabelReservationRequest
-          ? _value.getAllAvailabelReservationRequest
-          : getAllAvailabelReservationRequest // ignore: cast_nullable_to_non_nullable
-              as GetAllAvailabelReservationRequest,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_GetAllReservation implements _GetAllReservation {
-  const _$_GetAllReservation({required this.getAllAvailabelReservationRequest});
-
-  @override
-  final GetAllAvailabelReservationRequest getAllAvailabelReservationRequest;
-
-  @override
-  String toString() {
-    return 'ReservationEvent.getAllReservation(getAllAvailabelReservationRequest: $getAllAvailabelReservationRequest)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_GetAllReservation &&
-            (identical(other.getAllAvailabelReservationRequest,
-                    getAllAvailabelReservationRequest) ||
-                other.getAllAvailabelReservationRequest ==
-                    getAllAvailabelReservationRequest));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, getAllAvailabelReservationRequest);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_GetAllReservationCopyWith<_$_GetAllReservation> get copyWith =>
-      __$$_GetAllReservationCopyWithImpl<_$_GetAllReservation>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(
-            GetAllAvailabelReservationRequest getAllAvailabelReservationRequest)
-        getAllReservation,
-    required TResult Function(
-            GetSpecificReservationRequest getSpecificReservationRequest)
-        getSpecificFilter,
-  }) {
-    return getAllReservation(getAllAvailabelReservationRequest);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
-    TResult? Function(
-            GetSpecificReservationRequest getSpecificReservationRequest)?
-        getSpecificFilter,
-  }) {
-    return getAllReservation?.call(getAllAvailabelReservationRequest);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
-    TResult Function(
-            GetSpecificReservationRequest getSpecificReservationRequest)?
-        getSpecificFilter,
-    required TResult orElse(),
-  }) {
-    if (getAllReservation != null) {
-      return getAllReservation(getAllAvailabelReservationRequest);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(_GetAllReservation value) getAllReservation,
-    required TResult Function(_GetFilterdReservation value) getSpecificFilter,
-  }) {
-    return getAllReservation(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllReservation value)? getAllReservation,
-    TResult? Function(_GetFilterdReservation value)? getSpecificFilter,
-  }) {
-    return getAllReservation?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_GetAllReservation value)? getAllReservation,
-    TResult Function(_GetFilterdReservation value)? getSpecificFilter,
-    required TResult orElse(),
-  }) {
-    if (getAllReservation != null) {
-      return getAllReservation(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _GetAllReservation implements ReservationEvent {
-  const factory _GetAllReservation(
-      {required final GetAllAvailabelReservationRequest
-          getAllAvailabelReservationRequest}) = _$_GetAllReservation;
-
-  GetAllAvailabelReservationRequest get getAllAvailabelReservationRequest;
-  @JsonKey(ignore: true)
-  _$$_GetAllReservationCopyWith<_$_GetAllReservation> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -447,9 +257,6 @@ class _$_GetFilterdReservation implements _GetFilterdReservation {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(
-            GetAllAvailabelReservationRequest getAllAvailabelReservationRequest)
-        getAllReservation,
-    required TResult Function(
             GetSpecificReservationRequest getSpecificReservationRequest)
         getSpecificFilter,
   }) {
@@ -461,10 +268,6 @@ class _$_GetFilterdReservation implements _GetFilterdReservation {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
-    TResult? Function(
             GetSpecificReservationRequest getSpecificReservationRequest)?
         getSpecificFilter,
   }) {
@@ -475,10 +278,6 @@ class _$_GetFilterdReservation implements _GetFilterdReservation {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(
-            GetAllAvailabelReservationRequest
-                getAllAvailabelReservationRequest)?
-        getAllReservation,
     TResult Function(
             GetSpecificReservationRequest getSpecificReservationRequest)?
         getSpecificFilter,
@@ -494,7 +293,6 @@ class _$_GetFilterdReservation implements _GetFilterdReservation {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_GetAllReservation value) getAllReservation,
     required TResult Function(_GetFilterdReservation value) getSpecificFilter,
   }) {
     return getSpecificFilter(this);
@@ -504,7 +302,6 @@ class _$_GetFilterdReservation implements _GetFilterdReservation {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_GetAllReservation value)? getAllReservation,
     TResult? Function(_GetFilterdReservation value)? getSpecificFilter,
   }) {
     return getSpecificFilter?.call(this);
@@ -514,7 +311,6 @@ class _$_GetFilterdReservation implements _GetFilterdReservation {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_GetAllReservation value)? getAllReservation,
     TResult Function(_GetFilterdReservation value)? getSpecificFilter,
     required TResult orElse(),
   }) {
@@ -541,38 +337,38 @@ mixin _$ReservationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<Reservation> reservation) ListOfReservation,
+    required TResult Function(List<Reservation> reservation) listOfReservation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(List<Reservation> reservation)? ListOfReservation,
+    TResult? Function(List<Reservation> reservation)? listOfReservation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Reservation> reservation)? ListOfReservation,
+    TResult Function(List<Reservation> reservation)? listOfReservation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_ListOfReservation value) ListOfReservation,
+    required TResult Function(_ListOfReservation value) listOfReservation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_ListOfReservation value)? ListOfReservation,
+    TResult? Function(_ListOfReservation value)? listOfReservation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_ListOfReservation value)? ListOfReservation,
+    TResult Function(_ListOfReservation value)? listOfReservation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -634,7 +430,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<Reservation> reservation) ListOfReservation,
+    required TResult Function(List<Reservation> reservation) listOfReservation,
   }) {
     return initial();
   }
@@ -643,7 +439,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(List<Reservation> reservation)? ListOfReservation,
+    TResult? Function(List<Reservation> reservation)? listOfReservation,
   }) {
     return initial?.call();
   }
@@ -652,7 +448,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Reservation> reservation)? ListOfReservation,
+    TResult Function(List<Reservation> reservation)? listOfReservation,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -665,7 +461,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_ListOfReservation value) ListOfReservation,
+    required TResult Function(_ListOfReservation value) listOfReservation,
   }) {
     return initial(this);
   }
@@ -674,7 +470,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_ListOfReservation value)? ListOfReservation,
+    TResult? Function(_ListOfReservation value)? listOfReservation,
   }) {
     return initial?.call(this);
   }
@@ -683,7 +479,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_ListOfReservation value)? ListOfReservation,
+    TResult Function(_ListOfReservation value)? listOfReservation,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -744,7 +540,7 @@ class _$_ListOfReservation implements _ListOfReservation {
 
   @override
   String toString() {
-    return 'ReservationState.ListOfReservation(reservation: $reservation)';
+    return 'ReservationState.listOfReservation(reservation: $reservation)';
   }
 
   @override
@@ -771,29 +567,29 @@ class _$_ListOfReservation implements _ListOfReservation {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<Reservation> reservation) ListOfReservation,
+    required TResult Function(List<Reservation> reservation) listOfReservation,
   }) {
-    return ListOfReservation(reservation);
+    return listOfReservation(reservation);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(List<Reservation> reservation)? ListOfReservation,
+    TResult? Function(List<Reservation> reservation)? listOfReservation,
   }) {
-    return ListOfReservation?.call(reservation);
+    return listOfReservation?.call(reservation);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Reservation> reservation)? ListOfReservation,
+    TResult Function(List<Reservation> reservation)? listOfReservation,
     required TResult orElse(),
   }) {
-    if (ListOfReservation != null) {
-      return ListOfReservation(reservation);
+    if (listOfReservation != null) {
+      return listOfReservation(reservation);
     }
     return orElse();
   }
@@ -802,29 +598,29 @@ class _$_ListOfReservation implements _ListOfReservation {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_ListOfReservation value) ListOfReservation,
+    required TResult Function(_ListOfReservation value) listOfReservation,
   }) {
-    return ListOfReservation(this);
+    return listOfReservation(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_ListOfReservation value)? ListOfReservation,
+    TResult? Function(_ListOfReservation value)? listOfReservation,
   }) {
-    return ListOfReservation?.call(this);
+    return listOfReservation?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_ListOfReservation value)? ListOfReservation,
+    TResult Function(_ListOfReservation value)? listOfReservation,
     required TResult orElse(),
   }) {
-    if (ListOfReservation != null) {
-      return ListOfReservation(this);
+    if (listOfReservation != null) {
+      return listOfReservation(this);
     }
     return orElse();
   }

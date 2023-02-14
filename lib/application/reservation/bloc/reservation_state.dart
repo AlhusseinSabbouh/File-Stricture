@@ -4,6 +4,6 @@ part of 'reservation_bloc.dart';
 class ReservationState with _$ReservationState {
   const factory ReservationState.initial() = _Initial;
 
-  const factory ReservationState.ListOfReservation(
+  const factory ReservationState.listOfReservation(
       {required List<Reservation> reservation}) = _ListOfReservation;
 }

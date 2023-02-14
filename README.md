@@ -1,16 +1,53 @@
-# line_up
 
-A new Flutter project.
+# Line Up
 
-## Getting Started
+It is an application to manage the process of reservation spaces in parking
+## Preset
 
-This project is a starting point for a Flutter application.
+1- [Download Android Studio](https://developer.android.com/studio?gclid=Cj0KCQiA2-2eBhClARIsAGLQ2Rmwxl0PjC9_YpatB0SiD119PJEU5MIvbEEJkHd65CFjUndJK3M4vlsaArYrEALw_wcB&gclsrc=aw.ds)
 
-A few resources to get you started if this is your first Flutter project:
+2- [Download Visual Studio Code](https://code.visualstudio.com/download)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3- Download flutter SDK [Offical Site](https://docs.flutter.dev/get-started/install)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4- Set up an editor
+[Offical documentation](https://docs.flutter.dev/get-started/editor)
+
+
+## Build App file
+
+Clone the project
+
+```bash
+  git clone https://gitlab.scase.local/holcim-line-up/holcim-line-up-mobile.git
+```
+
+Go to the project directory
+
+```bash
+  cd holcim-line-up-mobile
+```
+
+Install dependencies
+
+```bash
+  flutter pub get
+```
+
+
+Build appbundle
+
+```bash
+  flutter build appbundle
+```
+
+
+
+## Deployment
+
+To deploy this project, you will find the .abb file at this directory:
+
+```bash
+  holcim-line-up-mobile/build/outputs/bundle/release
+```
+

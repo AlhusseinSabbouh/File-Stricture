@@ -1,4 +1,4 @@
-import 'package:line_up/domain/reservation/entity/value_object.dart';
+import 'package:line_up/domain/reservation/models/value_object/date.dart';
 
 class GetSpecificReservationRequest {}
 
@@ -8,12 +8,5 @@ class ReserveSpecifiSpaceRequest {
   final Date date;
   ReserveSpecifiSpaceRequest({
     required this.date,
-  });
-}
-
-class GetAllAvailabelReservationRequest {
-  Space space;
-  GetAllAvailabelReservationRequest({
-    required this.space,
   });
 }
