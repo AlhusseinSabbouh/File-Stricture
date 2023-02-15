@@ -11,7 +11,7 @@ abstract class ValueObject<F, T> {
     // id = identitiy - same as writing (r) => r
     return value.fold(
       (l) => throw Exception(),
-      (r) => r,
+      id,
     );
   }
 
