@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:line_up/config/themes/cubit_theme/theme_cubit.dart';
+import 'package:line_up/config/extension/localization.dart';
+import 'package:line_up/config/localization/local_cubit/local_cubit.dart';
+import 'package:line_up/config/themes/theme_cubit/theme_cubit.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final language = context.multiLanguage;
     return Scaffold(
       body: Center(
           child: Column(
@@ -22,6 +25,18 @@ class LoginPage extends StatelessWidget {
               context.read<ThemeCubit>().toLightTheme();
             },
             child: const Text("light theme"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.read<LocalCubit>().toArabic();
+            },
+            child: Text(language.arabicWord),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.read<LocalCubit>().toEnglish();
+            },
+            child: Text(language.englishWord),
           ),
         ],
       )),

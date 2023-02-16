@@ -44,6 +44,7 @@ dependencies:
   injectable: ^1.5.3
   get_it: ^7.2.0
   another_flushbar: ^1.12.29
+  easy_localization: ^3.0.0
   uuid: ^3.0.6
   auto_route: ^5.0.2
   kt_dart: ^1.0.0

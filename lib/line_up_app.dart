@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:line_up/config/localization/app_local/app_localization.dart';
+import 'package:line_up/config/localization/local_cubit/local_cubit.dart';
+import 'package:line_up/config/shared_prefrences/local_app_prefs.dart';
+import 'package:line_up/config/themes/theme_cubit/theme_cubit.dart';
 // ignore: depend_on_referenced_packages
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:line_up/config/routes/app_routes.dart';
 import 'package:line_up/config/routes/const_routes.dart';
-import 'package:line_up/config/shared_prefrences/app_prefs.dart';
-import 'package:line_up/config/themes/cubit_theme/theme_cubit.dart';
+import 'package:line_up/config/shared_prefrences/theme_app_prefs.dart';
 
 class LineUpApp extends StatelessWidget {
   final SharedPreferences sharedPrefernces;
@@ -14,17 +17,25 @@ class LineUpApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeAppPreferences appPreferences =
+    final ThemeAppPreferences themeAppPreferences =
         ThemeAppPreferences(sharedPrefernces);
+    final LocaleAppPreferences localAppPreferences =
+        LocaleAppPreferences(sharedPrefernces);
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => ThemeCubit(appPreferences),
+          create: (context) => ThemeCubit(themeAppPreferences),
+        ),
+        BlocProvider(
+          create: (context) => LocalCubit(localAppPreferences),
         )
       ],
       child: Builder(builder: (context) {
         final themeStateBloc = context.watch<ThemeCubit>().state;
-        return LineUp(themeStateBloc.themeData);
+        final localStateBloc = context.watch<LocalCubit>().state;
+        print(themeStateBloc);
+        print(localStateBloc);
+        return LineUp(themeStateBloc.theme, localStateBloc.local);
       }),
     );
   }
@@ -32,7 +43,8 @@ class LineUpApp extends StatelessWidget {
 
 class LineUp extends StatelessWidget {
   final ThemeData themeData;
-  const LineUp(this.themeData, {super.key});
+  final Locale localDate;
+  const LineUp(this.themeData, this.localDate, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +53,9 @@ class LineUp extends StatelessWidget {
       initialRoute: Routes.splashScreen,
       onGenerateRoute: RouteGenerator.getRoute,
       theme: themeData,
+      locale: localDate,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }
