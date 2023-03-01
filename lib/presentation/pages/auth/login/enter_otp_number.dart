@@ -4,19 +4,19 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:line_up/application/auth/bloc/auth_bloc.dart';
+import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/config/routes/const_routes.dart';
 import 'package:line_up/presentation/pages/auth/login/login_page.dart';
 
 class EnterOTPNumber extends StatelessWidget {
-  final AuthBloc authBloc;
-
-  const EnterOTPNumber(this.authBloc, {super.key});
+  EnterOTPNumber({super.key});
   final Color accentPurpleColor = const Color(0xFF6A53A1);
   final Color primaryColor = const Color(0xFF121212);
   final Color accentPinkColor = const Color(0xFFF99BBD);
   final Color accentDarkGreenColor = const Color(0xFF115C49);
   final Color accentYellowColor = const Color(0xFFFFB612);
   final Color accentOrangeColor = const Color(0xFFEA7A3B);
+  final AuthBloc authBloc = instance<AuthBloc>();
 
   @override
   Widget build(BuildContext context) {

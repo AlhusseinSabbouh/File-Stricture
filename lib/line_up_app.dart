@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/config/extension/media_query.dart';
 import 'package:line_up/config/localization/app_local/app_localization.dart';
 import 'package:line_up/config/localization/local_cubit/local_cubit.dart';
@@ -12,23 +14,26 @@ import 'package:line_up/config/routes/app_routes.dart';
 import 'package:line_up/config/routes/const_routes.dart';
 import 'package:line_up/config/shared_prefrences/theme_app_prefs.dart';
 
-class LineUpApp extends StatelessWidget {
-  final SharedPreferences sharedPrefernces;
-  const LineUpApp(this.sharedPrefernces, {super.key});
+class LineUpApp extends HookWidget {
+  const LineUpApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final ThemeAppPreferences themeAppPreferences =
-        ThemeAppPreferences(sharedPrefernces);
-    final LocaleAppPreferences localAppPreferences =
-        LocaleAppPreferences(sharedPrefernces);
+    useEffect(() {
+      return () {
+        instance<ThemeCubit>().close();
+        instance<LocalCubit>().close();
+        instance.reset();
+      };
+    });
+
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => ThemeCubit(themeAppPreferences),
+        BlocProvider.value(
+          value: instance<ThemeCubit>(),
         ),
-        BlocProvider(
-          create: (context) => LocalCubit(localAppPreferences),
+        BlocProvider.value(
+          value: instance<LocalCubit>(),
         )
       ],
       child: Builder(builder: (context) {

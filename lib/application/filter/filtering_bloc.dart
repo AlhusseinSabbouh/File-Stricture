@@ -29,7 +29,7 @@ class FilteringBloc extends Bloc<FilteringEvent, FilteringState> {
           settingHourSlider(sliderHourValue).toInt() + startHour);
       sliderHourValue = normalizitionHourSlider(
           (endHour.toDouble() - 1) - startHour.toDouble());
-
+      sliderHourNormalization = settingHourSlider(sliderHourValue);
       emit(FilteringState.updateStartHour(value: startHour));
     });
     on<SetEndTime>((event, emit) {

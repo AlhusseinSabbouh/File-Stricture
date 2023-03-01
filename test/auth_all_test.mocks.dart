@@ -9,6 +9,8 @@ import 'package:line_up/infrastructure/auth/data_source/remote/api_client/http_c
     as _i2;
 import 'package:line_up/infrastructure/auth/dto/response/user/user_dto.dart'
     as _i4;
+import 'package:line_up/infrastructure/auth/dto/resquest/forget_password/forget_password_dto.dart'
+    as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -36,6 +38,11 @@ class MockAuthHttpClient extends _i1.Mock implements _i2.AuthHttpClient {
         returnValue: '',
       ) as String);
   @override
+  String get forgetPassworPath => (super.noSuchMethod(
+        Invocation.getter(#forgetPassworPath),
+        returnValue: '',
+      ) as String);
+  @override
   _i3.Future<_i4.UserDto>? login(
     String? username,
     String? password,
@@ -47,4 +54,10 @@ class MockAuthHttpClient extends _i1.Mock implements _i2.AuthHttpClient {
           password,
         ],
       )) as _i3.Future<_i4.UserDto>?);
+  @override
+  _i3.Future<_i5.ForgetPasswordDTO>? forgetPassword(String? email) =>
+      (super.noSuchMethod(Invocation.method(
+        #forgetPassword,
+        [email],
+      )) as _i3.Future<_i5.ForgetPasswordDTO>?);
 }

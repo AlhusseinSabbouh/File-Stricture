@@ -63,6 +63,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(const AuthState.passwordsNotSame());
       }
     });
+    on<SendEmailForOTP>(
+      (event, emit) {
+        emit(const AuthState.sendOtpForEmail());
+      },
+    );
 
     // on<CheckPassword> ((event, emit) async {
     //   event.map(
@@ -71,6 +76,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     //       userNameCheck: (value) async => userNameCheck(value, emit),
     //       login: (value) async => await login(emit));
     // })
+
+    @override
+    Future<void> close() {
+      print("here we close auth bloc");
+      return super.close();
+    }
   }
 
   Future<void> login(Emitter<AuthState> emit) async {

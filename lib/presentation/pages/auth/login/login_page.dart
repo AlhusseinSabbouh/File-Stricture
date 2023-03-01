@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:line_up/application/auth/bloc/auth_bloc.dart';
+import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/config/extension/media_query.dart';
 import 'package:line_up/config/routes/const_routes.dart';
 
 class LoginPage extends StatelessWidget {
-  LoginPage(this.authBloc, {super.key});
-  final AuthBloc authBloc;
+  LoginPage({super.key});
+  final AuthBloc authBloc = instance<AuthBloc>();
   final GlobalKey<FormState> formDataKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
@@ -22,7 +22,8 @@ class LoginPage extends StatelessWidget {
             },
             logging: () {
               formDataKey.currentState?.validate();
-              if (formDataKey.currentState?.validate() ?? false == true) {
+              if (formDataKey.currentState?.validate() ?? false) {
+                print("show my dialog");
                 _showMyDialog(context);
               }
             },
@@ -232,7 +233,7 @@ class CustomEmailTextField extends StatelessWidget {
               authBloc.add(AuthEvent.userNameCheck(value));
             },
             validator: (value) {
-              return authBloc.userName?.value
+              return authBloc.userName.value
                   .fold((l) => "invalid email", (r) => null);
             },
             // onTapOutside: (event) {
@@ -270,7 +271,7 @@ class CustomPasswordTextField extends StatelessWidget {
               authBloc.add(AuthEvent.passwordCheck(value));
             },
             validator: (value) {
-              return authBloc.password?.value
+              return authBloc.password.value
                   .fold((l) => "invalid password", (r) => null);
             },
             // onTapOutside: (event) {

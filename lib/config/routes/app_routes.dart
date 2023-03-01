@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:line_up/application/auth/bloc/auth_bloc.dart';
+import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/config/routes/const_routes.dart';
+import 'package:line_up/presentation/pages/auth/login/animation_page.dart';
 import 'package:line_up/presentation/pages/auth/login/enter_email_for_forgetten_password.dart';
 import 'package:line_up/presentation/pages/auth/login/enter_otp_number.dart';
 import 'package:line_up/domain/auth/repo/repo.dart';
@@ -21,38 +23,35 @@ class RouteGenerator {
   //! but if we make a new instance of bloc then we need to dispose him
 
   static Route<dynamic> getRoute(RouteSettings settings) {
-    AuthHttpClient client = AuthHttpClient();
-    AuthRemoteCaller authRemoteDataSource = AuthRemoteCallerImpl(client);
-    AuthRepo authRepo =
-        AuthRepoImpl(authRemoteDataSource: authRemoteDataSource);
-    AuthBloc authBloc = AuthBloc(authRepo: authRepo);
-
     switch (settings.name) {
       case Routes.splashScreen:
-        return MaterialPageRoute(builder: (context) => DatePickerPage());
-      // return MaterialPageRoute(builder: (context) => LoginPage(authBloc));
+        initAuthPages();
+        // return MaterialPageRoute(builder: (context) => AnimationPage());
+        // return MaterialPageRoute(builder: (context) => const DatePickerPage());
+
+        return MaterialPageRoute(builder: (context) => LoginPage());
       case Routes.loginPage:
-        return MaterialPageRoute(
-            builder: (context) => EnterOTPNumber(authBloc));
+        return MaterialPageRoute(builder: (context) => EnterOTPNumber());
 
       case Routes.setRestoreEmail:
-        return MaterialPageRoute(
-            builder: (context) => SetRestorEmail(authBloc));
+        return MaterialPageRoute(builder: (context) => SetRestorEmail());
       case Routes.enterOTPNumber:
-        return MaterialPageRoute(
-            builder: (context) => EnterOTPNumber(authBloc));
+        return MaterialPageRoute(builder: (context) => EnterOTPNumber());
       case Routes.verificationPage:
-        return MaterialPageRoute(builder: (context) => LoginPage(authBloc));
+        return MaterialPageRoute(builder: (context) => LoginPage());
       case Routes.homePage:
+        unregisterAuthBloc();
         return MaterialPageRoute(
           builder: (context) => const HomePage(),
         );
       case Routes.setNewPassword:
         return MaterialPageRoute(
-          builder: (context) => SetNewPasswordPage(authBloc),
+          builder: (context) => SetNewPasswordPage(),
         );
       default:
-        return MaterialPageRoute(builder: (context) => LoginPage(authBloc));
+        print("default");
+        initAuthPages();
+        return MaterialPageRoute(builder: (context) => LoginPage());
     }
   }
 }

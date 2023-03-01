@@ -24,7 +24,8 @@ mixin _$AuthEvent {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +37,8 @@ mixin _$AuthEvent {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) =>
       throw _privateConstructorUsedError;
@@ -48,7 +50,8 @@ mixin _$AuthEvent {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) =>
@@ -62,6 +65,7 @@ mixin _$AuthEvent {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) =>
       throw _privateConstructorUsedError;
@@ -74,6 +78,7 @@ mixin _$AuthEvent {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) =>
       throw _privateConstructorUsedError;
@@ -86,6 +91,7 @@ mixin _$AuthEvent {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) =>
@@ -151,7 +157,8 @@ class _$Started implements Started {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return started();
@@ -166,7 +173,8 @@ class _$Started implements Started {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return started?.call();
@@ -181,7 +189,8 @@ class _$Started implements Started {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -201,6 +210,7 @@ class _$Started implements Started {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return started(this);
@@ -216,6 +226,7 @@ class _$Started implements Started {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return started?.call(this);
@@ -231,6 +242,7 @@ class _$Started implements Started {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -316,7 +328,8 @@ class _$CheckPassword implements CheckPassword {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return passwordCheck(password);
@@ -331,7 +344,8 @@ class _$CheckPassword implements CheckPassword {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return passwordCheck?.call(password);
@@ -346,7 +360,8 @@ class _$CheckPassword implements CheckPassword {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -366,6 +381,7 @@ class _$CheckPassword implements CheckPassword {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return passwordCheck(this);
@@ -381,6 +397,7 @@ class _$CheckPassword implements CheckPassword {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return passwordCheck?.call(this);
@@ -396,6 +413,7 @@ class _$CheckPassword implements CheckPassword {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -487,7 +505,8 @@ class _$CheckPasswordSecond implements CheckPasswordSecond {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return passwordCheckSecond(password);
@@ -502,7 +521,8 @@ class _$CheckPasswordSecond implements CheckPasswordSecond {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return passwordCheckSecond?.call(password);
@@ -517,7 +537,8 @@ class _$CheckPasswordSecond implements CheckPasswordSecond {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -537,6 +558,7 @@ class _$CheckPasswordSecond implements CheckPasswordSecond {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return passwordCheckSecond(this);
@@ -552,6 +574,7 @@ class _$CheckPasswordSecond implements CheckPasswordSecond {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return passwordCheckSecond?.call(this);
@@ -567,6 +590,7 @@ class _$CheckPasswordSecond implements CheckPasswordSecond {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -631,7 +655,8 @@ class _$ChangePassword implements ChangePassword {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return changePassowrd();
@@ -646,7 +671,8 @@ class _$ChangePassword implements ChangePassword {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return changePassowrd?.call();
@@ -661,7 +687,8 @@ class _$ChangePassword implements ChangePassword {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -681,6 +708,7 @@ class _$ChangePassword implements ChangePassword {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return changePassowrd(this);
@@ -696,6 +724,7 @@ class _$ChangePassword implements ChangePassword {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return changePassowrd?.call(this);
@@ -711,6 +740,7 @@ class _$ChangePassword implements ChangePassword {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -796,7 +826,8 @@ class _$CheckUserName implements CheckUserName {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return userNameCheck(userName);
@@ -811,7 +842,8 @@ class _$CheckUserName implements CheckUserName {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return userNameCheck?.call(userName);
@@ -826,7 +858,8 @@ class _$CheckUserName implements CheckUserName {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -846,6 +879,7 @@ class _$CheckUserName implements CheckUserName {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return userNameCheck(this);
@@ -861,6 +895,7 @@ class _$CheckUserName implements CheckUserName {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return userNameCheck?.call(this);
@@ -876,6 +911,7 @@ class _$CheckUserName implements CheckUserName {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -964,7 +1000,8 @@ class _$CheckOTP implements CheckOTP {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return checkOTPNumber(otp);
@@ -979,7 +1016,8 @@ class _$CheckOTP implements CheckOTP {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return checkOTPNumber?.call(otp);
@@ -994,7 +1032,8 @@ class _$CheckOTP implements CheckOTP {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -1014,6 +1053,7 @@ class _$CheckOTP implements CheckOTP {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return checkOTPNumber(this);
@@ -1029,6 +1069,7 @@ class _$CheckOTP implements CheckOTP {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return checkOTPNumber?.call(this);
@@ -1044,6 +1085,7 @@ class _$CheckOTP implements CheckOTP {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -1068,8 +1110,6 @@ abstract class _$$GetOTPForEmailCopyWith<$Res> {
   factory _$$GetOTPForEmailCopyWith(
           _$GetOTPForEmail value, $Res Function(_$GetOTPForEmail) then) =
       __$$GetOTPForEmailCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String? email});
 }
 
 /// @nodoc
@@ -1079,50 +1119,26 @@ class __$$GetOTPForEmailCopyWithImpl<$Res>
   __$$GetOTPForEmailCopyWithImpl(
       _$GetOTPForEmail _value, $Res Function(_$GetOTPForEmail) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? email = freezed,
-  }) {
-    return _then(_$GetOTPForEmail(
-      freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$GetOTPForEmail implements GetOTPForEmail {
-  const _$GetOTPForEmail(this.email);
-
-  @override
-  final String? email;
+  const _$GetOTPForEmail();
 
   @override
   String toString() {
-    return 'AuthEvent.getOTPforEmail(email: $email)';
+    return 'AuthEvent.getOTPforEmail()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetOTPForEmail &&
-            (identical(other.email, email) || other.email == email));
+        (other.runtimeType == runtimeType && other is _$GetOTPForEmail);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, email);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetOTPForEmailCopyWith<_$GetOTPForEmail> get copyWith =>
-      __$$GetOTPForEmailCopyWithImpl<_$GetOTPForEmail>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1133,10 +1149,11 @@ class _$GetOTPForEmail implements GetOTPForEmail {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
-    return getOTPforEmail(email);
+    return getOTPforEmail();
   }
 
   @override
@@ -1148,10 +1165,11 @@ class _$GetOTPForEmail implements GetOTPForEmail {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
-    return getOTPforEmail?.call(email);
+    return getOTPforEmail?.call();
   }
 
   @override
@@ -1163,12 +1181,13 @@ class _$GetOTPForEmail implements GetOTPForEmail {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
     if (getOTPforEmail != null) {
-      return getOTPforEmail(email);
+      return getOTPforEmail();
     }
     return orElse();
   }
@@ -1183,6 +1202,7 @@ class _$GetOTPForEmail implements GetOTPForEmail {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return getOTPforEmail(this);
@@ -1198,6 +1218,7 @@ class _$GetOTPForEmail implements GetOTPForEmail {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return getOTPforEmail?.call(this);
@@ -1213,6 +1234,7 @@ class _$GetOTPForEmail implements GetOTPForEmail {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -1224,11 +1246,181 @@ class _$GetOTPForEmail implements GetOTPForEmail {
 }
 
 abstract class GetOTPForEmail implements AuthEvent {
-  const factory GetOTPForEmail(final String? email) = _$GetOTPForEmail;
+  const factory GetOTPForEmail() = _$GetOTPForEmail;
+}
+
+/// @nodoc
+abstract class _$$SendEmailForOTPCopyWith<$Res> {
+  factory _$$SendEmailForOTPCopyWith(
+          _$SendEmailForOTP value, $Res Function(_$SendEmailForOTP) then) =
+      __$$SendEmailForOTPCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? email});
+}
+
+/// @nodoc
+class __$$SendEmailForOTPCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SendEmailForOTP>
+    implements _$$SendEmailForOTPCopyWith<$Res> {
+  __$$SendEmailForOTPCopyWithImpl(
+      _$SendEmailForOTP _value, $Res Function(_$SendEmailForOTP) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = freezed,
+  }) {
+    return _then(_$SendEmailForOTP(
+      freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SendEmailForOTP implements SendEmailForOTP {
+  const _$SendEmailForOTP(this.email);
+
+  @override
+  final String? email;
+
+  @override
+  String toString() {
+    return 'AuthEvent.sendEmailForOTP(email: $email)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SendEmailForOTP &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SendEmailForOTPCopyWith<_$SendEmailForOTP> get copyWith =>
+      __$$SendEmailForOTPCopyWithImpl<_$SendEmailForOTP>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
+    required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
+    required TResult Function() login,
+  }) {
+    return sendEmailForOTP(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
+    TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
+    TResult? Function()? login,
+  }) {
+    return sendEmailForOTP?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
+    TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
+    TResult Function()? login,
+    required TResult orElse(),
+  }) {
+    if (sendEmailForOTP != null) {
+      return sendEmailForOTP(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
+    required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
+    required TResult Function(Logging value) login,
+  }) {
+    return sendEmailForOTP(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
+    TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
+    TResult? Function(Logging value)? login,
+  }) {
+    return sendEmailForOTP?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
+    TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
+    TResult Function(Logging value)? login,
+    required TResult orElse(),
+  }) {
+    if (sendEmailForOTP != null) {
+      return sendEmailForOTP(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SendEmailForOTP implements AuthEvent {
+  const factory SendEmailForOTP(final String? email) = _$SendEmailForOTP;
 
   String? get email;
   @JsonKey(ignore: true)
-  _$$GetOTPForEmailCopyWith<_$GetOTPForEmail> get copyWith =>
+  _$$SendEmailForOTPCopyWith<_$SendEmailForOTP> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1274,7 +1466,8 @@ class _$Logging implements Logging {
     required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
     required TResult Function(String? otp) checkOTPNumber,
-    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() getOTPforEmail,
+    required TResult Function(String? email) sendEmailForOTP,
     required TResult Function() login,
   }) {
     return login();
@@ -1289,7 +1482,8 @@ class _$Logging implements Logging {
     TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
     TResult? Function(String? otp)? checkOTPNumber,
-    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? getOTPforEmail,
+    TResult? Function(String? email)? sendEmailForOTP,
     TResult? Function()? login,
   }) {
     return login?.call();
@@ -1304,7 +1498,8 @@ class _$Logging implements Logging {
     TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
     TResult Function(String? otp)? checkOTPNumber,
-    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? getOTPforEmail,
+    TResult Function(String? email)? sendEmailForOTP,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -1324,6 +1519,7 @@ class _$Logging implements Logging {
     required TResult Function(CheckUserName value) userNameCheck,
     required TResult Function(CheckOTP value) checkOTPNumber,
     required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(SendEmailForOTP value) sendEmailForOTP,
     required TResult Function(Logging value) login,
   }) {
     return login(this);
@@ -1339,6 +1535,7 @@ class _$Logging implements Logging {
     TResult? Function(CheckUserName value)? userNameCheck,
     TResult? Function(CheckOTP value)? checkOTPNumber,
     TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult? Function(Logging value)? login,
   }) {
     return login?.call(this);
@@ -1354,6 +1551,7 @@ class _$Logging implements Logging {
     TResult Function(CheckUserName value)? userNameCheck,
     TResult Function(CheckOTP value)? checkOTPNumber,
     TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(SendEmailForOTP value)? sendEmailForOTP,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -1374,6 +1572,7 @@ mixin _$AuthState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -1394,6 +1593,7 @@ mixin _$AuthState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -1413,6 +1613,7 @@ mixin _$AuthState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -1433,6 +1634,7 @@ mixin _$AuthState {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -1452,6 +1654,7 @@ mixin _$AuthState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -1471,6 +1674,7 @@ mixin _$AuthState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -1544,6 +1748,7 @@ class _$Initial implements Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -1567,6 +1772,7 @@ class _$Initial implements Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -1589,6 +1795,7 @@ class _$Initial implements Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -1615,6 +1822,7 @@ class _$Initial implements Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -1637,6 +1845,7 @@ class _$Initial implements Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -1659,6 +1868,7 @@ class _$Initial implements Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -1725,6 +1935,7 @@ class _$LoginDone implements LoginDone {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -1748,6 +1959,7 @@ class _$LoginDone implements LoginDone {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -1770,6 +1982,7 @@ class _$LoginDone implements LoginDone {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -1796,6 +2009,7 @@ class _$LoginDone implements LoginDone {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -1818,6 +2032,7 @@ class _$LoginDone implements LoginDone {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -1840,6 +2055,7 @@ class _$LoginDone implements LoginDone {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -1864,6 +2080,193 @@ class _$LoginDone implements LoginDone {
 
 abstract class LoginDone implements AuthState {
   const factory LoginDone() = _$LoginDone;
+}
+
+/// @nodoc
+abstract class _$$SendOTPForEmailCopyWith<$Res> {
+  factory _$$SendOTPForEmailCopyWith(
+          _$SendOTPForEmail value, $Res Function(_$SendOTPForEmail) then) =
+      __$$SendOTPForEmailCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SendOTPForEmailCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SendOTPForEmail>
+    implements _$$SendOTPForEmailCopyWith<$Res> {
+  __$$SendOTPForEmailCopyWithImpl(
+      _$SendOTPForEmail _value, $Res Function(_$SendOTPForEmail) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SendOTPForEmail implements SendOTPForEmail {
+  const _$SendOTPForEmail();
+
+  @override
+  String toString() {
+    return 'AuthState.sendOtpForEmail()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SendOTPForEmail);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return sendOtpForEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return sendOtpForEmail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (sendOtpForEmail != null) {
+      return sendOtpForEmail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return sendOtpForEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return sendOtpForEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (sendOtpForEmail != null) {
+      return sendOtpForEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SendOTPForEmail implements AuthState {
+  const factory SendOTPForEmail() = _$SendOTPForEmail;
 }
 
 /// @nodoc
@@ -1906,6 +2309,7 @@ class _$CorrectUserName implements CorrectUserName {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -1929,6 +2333,7 @@ class _$CorrectUserName implements CorrectUserName {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -1951,6 +2356,7 @@ class _$CorrectUserName implements CorrectUserName {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -1977,6 +2383,7 @@ class _$CorrectUserName implements CorrectUserName {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -1999,6 +2406,7 @@ class _$CorrectUserName implements CorrectUserName {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -2021,6 +2429,7 @@ class _$CorrectUserName implements CorrectUserName {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -2087,6 +2496,7 @@ class _$CorrectPassword implements CorrectPassword {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -2110,6 +2520,7 @@ class _$CorrectPassword implements CorrectPassword {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -2132,6 +2543,7 @@ class _$CorrectPassword implements CorrectPassword {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -2158,6 +2570,7 @@ class _$CorrectPassword implements CorrectPassword {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -2180,6 +2593,7 @@ class _$CorrectPassword implements CorrectPassword {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -2202,6 +2616,7 @@ class _$CorrectPassword implements CorrectPassword {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -2268,6 +2683,7 @@ class _$CorrectOTP implements CorrectOTP {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -2291,6 +2707,7 @@ class _$CorrectOTP implements CorrectOTP {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -2313,6 +2730,7 @@ class _$CorrectOTP implements CorrectOTP {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -2339,6 +2757,7 @@ class _$CorrectOTP implements CorrectOTP {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -2361,6 +2780,7 @@ class _$CorrectOTP implements CorrectOTP {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -2383,6 +2803,7 @@ class _$CorrectOTP implements CorrectOTP {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -2448,6 +2869,7 @@ class _$WrongOTP implements WrongOTP {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -2471,6 +2893,7 @@ class _$WrongOTP implements WrongOTP {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -2493,6 +2916,7 @@ class _$WrongOTP implements WrongOTP {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -2519,6 +2943,7 @@ class _$WrongOTP implements WrongOTP {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -2541,6 +2966,7 @@ class _$WrongOTP implements WrongOTP {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -2563,6 +2989,7 @@ class _$WrongOTP implements WrongOTP {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -2629,6 +3056,7 @@ class _$PasswordsNotSame implements PasswordsNotSame {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -2652,6 +3080,7 @@ class _$PasswordsNotSame implements PasswordsNotSame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -2674,6 +3103,7 @@ class _$PasswordsNotSame implements PasswordsNotSame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -2700,6 +3130,7 @@ class _$PasswordsNotSame implements PasswordsNotSame {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -2722,6 +3153,7 @@ class _$PasswordsNotSame implements PasswordsNotSame {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -2744,6 +3176,7 @@ class _$PasswordsNotSame implements PasswordsNotSame {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -2810,6 +3243,7 @@ class _$PasswordChanging implements PasswordChanging {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -2833,6 +3267,7 @@ class _$PasswordChanging implements PasswordChanging {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -2855,6 +3290,7 @@ class _$PasswordChanging implements PasswordChanging {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -2881,6 +3317,7 @@ class _$PasswordChanging implements PasswordChanging {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -2903,6 +3340,7 @@ class _$PasswordChanging implements PasswordChanging {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -2925,6 +3363,7 @@ class _$PasswordChanging implements PasswordChanging {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -2991,6 +3430,7 @@ class _$ChangePasswordDone implements ChangePasswordDone {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -3014,6 +3454,7 @@ class _$ChangePasswordDone implements ChangePasswordDone {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -3036,6 +3477,7 @@ class _$ChangePasswordDone implements ChangePasswordDone {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -3062,6 +3504,7 @@ class _$ChangePasswordDone implements ChangePasswordDone {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -3084,6 +3527,7 @@ class _$ChangePasswordDone implements ChangePasswordDone {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -3106,6 +3550,7 @@ class _$ChangePasswordDone implements ChangePasswordDone {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -3172,6 +3617,7 @@ class _$ChangePasswordError implements ChangePasswordError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -3195,6 +3641,7 @@ class _$ChangePasswordError implements ChangePasswordError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -3217,6 +3664,7 @@ class _$ChangePasswordError implements ChangePasswordError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -3243,6 +3691,7 @@ class _$ChangePasswordError implements ChangePasswordError {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -3265,6 +3714,7 @@ class _$ChangePasswordError implements ChangePasswordError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -3287,6 +3737,7 @@ class _$ChangePasswordError implements ChangePasswordError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -3353,6 +3804,7 @@ class _$OtpChecking implements OtpChecking {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -3376,6 +3828,7 @@ class _$OtpChecking implements OtpChecking {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -3398,6 +3851,7 @@ class _$OtpChecking implements OtpChecking {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -3424,6 +3878,7 @@ class _$OtpChecking implements OtpChecking {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -3446,6 +3901,7 @@ class _$OtpChecking implements OtpChecking {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -3468,6 +3924,7 @@ class _$OtpChecking implements OtpChecking {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -3561,6 +4018,7 @@ class _$WrongPassword implements WrongPassword {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -3584,6 +4042,7 @@ class _$WrongPassword implements WrongPassword {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -3606,6 +4065,7 @@ class _$WrongPassword implements WrongPassword {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -3632,6 +4092,7 @@ class _$WrongPassword implements WrongPassword {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -3654,6 +4115,7 @@ class _$WrongPassword implements WrongPassword {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -3676,6 +4138,7 @@ class _$WrongPassword implements WrongPassword {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -3775,6 +4238,7 @@ class _$WrongUserName implements WrongUserName {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -3798,6 +4262,7 @@ class _$WrongUserName implements WrongUserName {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -3820,6 +4285,7 @@ class _$WrongUserName implements WrongUserName {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -3846,6 +4312,7 @@ class _$WrongUserName implements WrongUserName {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -3868,6 +4335,7 @@ class _$WrongUserName implements WrongUserName {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -3890,6 +4358,7 @@ class _$WrongUserName implements WrongUserName {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -3989,6 +4458,7 @@ class _$LoginError implements LoginError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -4012,6 +4482,7 @@ class _$LoginError implements LoginError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -4034,6 +4505,7 @@ class _$LoginError implements LoginError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -4060,6 +4532,7 @@ class _$LoginError implements LoginError {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -4082,6 +4555,7 @@ class _$LoginError implements LoginError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -4104,6 +4578,7 @@ class _$LoginError implements LoginError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,
@@ -4176,6 +4651,7 @@ class _$LoggingState implements LoggingState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loginDone,
+    required TResult Function() sendOtpForEmail,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
     required TResult Function() correctOTP,
@@ -4199,6 +4675,7 @@ class _$LoggingState implements LoggingState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loginDone,
+    TResult? Function()? sendOtpForEmail,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
     TResult? Function()? correctOTP,
@@ -4221,6 +4698,7 @@ class _$LoggingState implements LoggingState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loginDone,
+    TResult Function()? sendOtpForEmail,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
     TResult Function()? correctOTP,
@@ -4247,6 +4725,7 @@ class _$LoggingState implements LoggingState {
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
+    required TResult Function(SendOTPForEmail value) sendOtpForEmail,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
     required TResult Function(CorrectOTP value) correctOTP,
@@ -4269,6 +4748,7 @@ class _$LoggingState implements LoggingState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
     TResult? Function(CorrectOTP value)? correctOTP,
@@ -4291,6 +4771,7 @@ class _$LoggingState implements LoggingState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
+    TResult Function(SendOTPForEmail value)? sendOtpForEmail,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
     TResult Function(CorrectOTP value)? correctOTP,

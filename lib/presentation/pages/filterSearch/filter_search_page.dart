@@ -31,7 +31,8 @@ class DatePickerPage extends HookWidget {
       };
     }, []);
     double sliderValue = 0;
-    DateTime initialDate = DateTime.now();
+    bool sliderDisable = false;
+    DateTime initialDate = DateTime.now().add(const Duration(days: 1));
     TimeOfDay initialTime = TimeOfDay.fromDateTime(DateTime(DateTime.now().year,
         DateTime.now().month, DateTime.now().day, 8, 0, 0));
     // DateTime firstDate = DateTime(2022);
@@ -63,6 +64,11 @@ class DatePickerPage extends HookWidget {
                     initialValue: [initialDate],
                     onValueChanged: (dates) {
                       print(dates);
+                      if (dates.length > 1) {
+                        sliderDisable = true;
+                      } else {
+                        sliderDisable = false;
+                      }
                     },
                   ),
                 ),
@@ -109,8 +115,12 @@ class DatePickerPage extends HookWidget {
                           value: filteringBloc.sliderHourValue,
                           divisions: 23,
                           onChanged: (v) {
-                            filteringBloc
-                                .add(FilteringEvent.setHourSlider(value: v));
+                            if (sliderDisable == false) {
+                              filteringBloc
+                                  .add(FilteringEvent.setHourSlider(value: v));
+                            } else {
+                              null;
+                            }
                           }),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

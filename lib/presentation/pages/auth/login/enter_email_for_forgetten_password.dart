@@ -3,15 +3,16 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:line_up/application/auth/bloc/auth_bloc.dart';
+import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/config/extension/media_query.dart';
 import 'package:line_up/config/routes/const_routes.dart';
 import 'package:line_up/presentation/pages/auth/login/login_page.dart';
 
 class SetRestorEmail extends StatelessWidget {
-  final AuthBloc authBloc;
+  final AuthBloc authBloc = instance<AuthBloc>();
   final GlobalKey<FormState> formDataKey = GlobalKey<FormState>();
 
-  SetRestorEmail(this.authBloc, {super.key}) {
+  SetRestorEmail({super.key}) {
     authBloc.add(const AuthEvent.userNameCheck(null));
   }
 
@@ -33,7 +34,7 @@ class SetRestorEmail extends StatelessWidget {
         bloc: authBloc,
         listener: (context, state) {
           state.maybeWhen(
-              otpChecking: () {
+              sendOtpForEmail: () {
                 Navigator.of(context).popAndPushNamed(Routes.enterOTPNumber);
               },
               orElse: () {});
@@ -70,7 +71,7 @@ class SetRestorEmail extends StatelessWidget {
                                       authBloc.userName.value.fold((l) => null,
                                           (r) {
                                         authBloc
-                                            .add(AuthEvent.getOTPforEmail(r));
+                                            .add(AuthEvent.sendEmailForOTP(r));
                                       });
                                     }
                                   },

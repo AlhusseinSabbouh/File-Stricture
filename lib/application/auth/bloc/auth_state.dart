@@ -4,6 +4,7 @@ part of 'auth_bloc.dart';
 class AuthState with _$AuthState {
   const factory AuthState.initial() = Initial;
   const factory AuthState.loginDone() = LoginDone;
+  const factory AuthState.sendOtpForEmail() = SendOTPForEmail;
   const factory AuthState.correctUserName() = CorrectUserName;
   const factory AuthState.correctPassword() = CorrectPassword;
   const factory AuthState.correctOTP() = CorrectOTP;

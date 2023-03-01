@@ -1,15 +1,18 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/line_up_app.dart';
 // ignore: depend_on_referenced_packages
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences sharedPrefernces = await SharedPreferences.getInstance();
+
+  // SharedPreferences sharedPrefernces = await SharedPreferences.getInstance();
+  await initDIApp();
   Bloc.observer = const AppBlocObserver();
-  runApp(LineUpApp(sharedPrefernces));
+  runApp(const LineUpApp());
 }
 
 class AppBlocObserver extends BlocObserver {
@@ -18,7 +21,7 @@ class AppBlocObserver extends BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
     super.onChange(bloc, change);
-    print(change);
+    // print(change);
   }
 
   @override
