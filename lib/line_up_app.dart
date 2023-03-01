@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:line_up/config/extension/media_query.dart';
 import 'package:line_up/config/localization/app_local/app_localization.dart';
 import 'package:line_up/config/localization/local_cubit/local_cubit.dart';
 import 'package:line_up/config/shared_prefrences/local_app_prefs.dart';
@@ -31,10 +32,15 @@ class LineUpApp extends StatelessWidget {
         )
       ],
       child: Builder(builder: (context) {
+        //TODO to customize the app fonts
+        // if(context.ratio 16/14){
+        //   context.read<ThemeCubit>().toSmallTheme();
+        // }
+        // else{
+        //   context.read<ThemeCubit>().toLargeTheme();
+        // }
         final themeStateBloc = context.watch<ThemeCubit>().state;
         final localStateBloc = context.watch<LocalCubit>().state;
-        print(themeStateBloc);
-        print(localStateBloc);
         return LineUp(themeStateBloc.theme, localStateBloc.local);
       }),
     );

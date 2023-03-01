@@ -12,9 +12,8 @@ class ThemeCubit extends Cubit<ThemeState> {
 
   ThemeCubit(this._appPreferences)
       : super(ThemeState.initial(AppTheme.lightTheme)) {
-    _appPreferences.getThemeApp().then((themeEnum) {
-      emit(ThemeState.selectTheme(AppTheme.getCurrentTheme(themeEnum)));
-    });
+    emit(ThemeState.selectTheme(
+        AppTheme.getCurrentTheme(_appPreferences.getThemeApp())));
   }
 
   void toLightTheme() async {
@@ -25,5 +24,11 @@ class ThemeCubit extends Cubit<ThemeState> {
   void toDarkTheme() async {
     await _appPreferences.setTheme(AppThemesEnum.dark);
     emit(ThemeState.selectTheme(AppTheme.darkTheme));
+  }
+
+  //add new theme to cubit
+  void toRedTheme() async {
+    await _appPreferences.setTheme(AppThemesEnum.red);
+    emit(ThemeState.selectTheme(AppTheme.redTheme));
   }
 }

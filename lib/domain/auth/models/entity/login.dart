@@ -21,7 +21,8 @@ class Login extends Equatable with Aggregation, Entity {
   final UserName userName;
 
   Login({required this.password, required this.userName}) {
-    data = List<ValueObject>.of(<ValueObject>[password, userName]);
+    data = List<ValueObject>.of(<ValueObject>[password, userName],
+        growable: false);
   }
 
   @override

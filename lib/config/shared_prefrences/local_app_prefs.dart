@@ -8,11 +8,12 @@ const String arabicString = 'ar';
 const String englishString = 'en';
 
 enum AppLocalesEnum {
-  arabic(arabicString),
-  english(englishString);
+  arabic(arabicString, arabicLocal),
+  english(englishString, englishLocal);
 
   final String type;
-  const AppLocalesEnum(this.type);
+  final Locale local;
+  const AppLocalesEnum(this.type, this.local);
 }
 
 const Locale arabicLocal = Locale("ar", "SA");
@@ -31,7 +32,7 @@ class LocaleAppPreferences {
     await _sharedPrefernces.setString(prefsKeyLocale, locales.type);
   }
 
-  Future<AppLocalesEnum> getLocaleApp() async {
+  AppLocalesEnum getLocaleApp() {
     String? currentLocale = _sharedPrefernces.getString(prefsKeyLocale);
     return getLocalesEnumFromString(currentLocale);
   }
@@ -49,7 +50,7 @@ class LocaleAppPreferences {
       case AppLocalesEnum.arabic:
         return const Locale("ar");
       case AppLocalesEnum.english:
-        return const Locale("ar");
+        return const Locale("en");
     }
   }
 }

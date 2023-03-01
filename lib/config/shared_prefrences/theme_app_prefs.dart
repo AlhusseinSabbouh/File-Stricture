@@ -3,9 +3,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 const String prefsKeyTheme = 'prefsKeyTheme';
 
+//add new theme enum
 enum AppThemesEnum {
   dark("dark"),
-  light("light");
+  light("light"),
+  red("red");
 
   final String type;
   const AppThemesEnum(this.type);
@@ -24,14 +26,17 @@ class ThemeAppPreferences {
     await _sharedPrefernces.setString(prefsKeyTheme, themes.type);
   }
 
-  Future<AppThemesEnum> getThemeApp() async {
+  AppThemesEnum getThemeApp() {
     String? currentTheme = _sharedPrefernces.getString(prefsKeyTheme);
     return getThemesEnumFromString(currentTheme);
   }
 
+//Just Add here else if
   AppThemesEnum getThemesEnumFromString(String? themeString) {
     if (themeString == AppThemesEnum.dark.type) {
       return AppThemesEnum.dark;
+    } else if (themeString == AppThemesEnum.red.type) {
+      return AppThemesEnum.red;
     } else {
       return AppThemesEnum.light;
     }

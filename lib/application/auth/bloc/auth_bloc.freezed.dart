@@ -20,7 +20,11 @@ mixin _$AuthEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
     required TResult Function() login,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +32,11 @@ mixin _$AuthEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
     TResult? Function()? login,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,32 +44,48 @@ mixin _$AuthEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
     TResult Function()? login,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(Started value) started,
     required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
     required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
     required TResult Function(Logging value) login,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(Started value)? started,
     TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
     TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
     TResult? Function(Logging value)? login,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(Started value)? started,
     TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
     TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) =>
@@ -86,24 +110,23 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$StartedCopyWith<$Res> {
+  factory _$$StartedCopyWith(_$Started value, $Res Function(_$Started) then) =
+      __$$StartedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$StartedCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$Started>
+    implements _$$StartedCopyWith<$Res> {
+  __$$StartedCopyWithImpl(_$Started _value, $Res Function(_$Started) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$Started implements Started {
+  const _$Started();
 
   @override
   String toString() {
@@ -113,7 +136,7 @@ class _$_Started implements _Started {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$Started);
   }
 
   @override
@@ -124,7 +147,11 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
     required TResult Function() login,
   }) {
     return started();
@@ -135,7 +162,11 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
     TResult? Function()? login,
   }) {
     return started?.call();
@@ -146,7 +177,11 @@ class _$_Started implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -159,9 +194,13 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(Started value) started,
     required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
     required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
     required TResult Function(Logging value) login,
   }) {
     return started(this);
@@ -170,9 +209,13 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(Started value)? started,
     TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
     TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
     TResult? Function(Logging value)? login,
   }) {
     return started?.call(this);
@@ -181,9 +224,13 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(Started value)? started,
     TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
     TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -194,8 +241,8 @@ class _$_Started implements _Started {
   }
 }
 
-abstract class _Started implements AuthEvent {
-  const factory _Started() = _$_Started;
+abstract class Started implements AuthEvent {
+  const factory Started() = _$Started;
 }
 
 /// @nodoc
@@ -265,7 +312,11 @@ class _$CheckPassword implements CheckPassword {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
     required TResult Function() login,
   }) {
     return passwordCheck(password);
@@ -276,7 +327,11 @@ class _$CheckPassword implements CheckPassword {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
     TResult? Function()? login,
   }) {
     return passwordCheck?.call(password);
@@ -287,7 +342,11 @@ class _$CheckPassword implements CheckPassword {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -300,9 +359,13 @@ class _$CheckPassword implements CheckPassword {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(Started value) started,
     required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
     required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
     required TResult Function(Logging value) login,
   }) {
     return passwordCheck(this);
@@ -311,9 +374,13 @@ class _$CheckPassword implements CheckPassword {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(Started value)? started,
     TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
     TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
     TResult? Function(Logging value)? login,
   }) {
     return passwordCheck?.call(this);
@@ -322,9 +389,13 @@ class _$CheckPassword implements CheckPassword {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(Started value)? started,
     TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
     TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -342,6 +413,316 @@ abstract class CheckPassword implements AuthEvent {
   @JsonKey(ignore: true)
   _$$CheckPasswordCopyWith<_$CheckPassword> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CheckPasswordSecondCopyWith<$Res> {
+  factory _$$CheckPasswordSecondCopyWith(_$CheckPasswordSecond value,
+          $Res Function(_$CheckPasswordSecond) then) =
+      __$$CheckPasswordSecondCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? password});
+}
+
+/// @nodoc
+class __$$CheckPasswordSecondCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckPasswordSecond>
+    implements _$$CheckPasswordSecondCopyWith<$Res> {
+  __$$CheckPasswordSecondCopyWithImpl(
+      _$CheckPasswordSecond _value, $Res Function(_$CheckPasswordSecond) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? password = freezed,
+  }) {
+    return _then(_$CheckPasswordSecond(
+      freezed == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CheckPasswordSecond implements CheckPasswordSecond {
+  const _$CheckPasswordSecond(this.password);
+
+  @override
+  final String? password;
+
+  @override
+  String toString() {
+    return 'AuthEvent.passwordCheckSecond(password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CheckPasswordSecond &&
+            (identical(other.password, password) ||
+                other.password == password));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CheckPasswordSecondCopyWith<_$CheckPasswordSecond> get copyWith =>
+      __$$CheckPasswordSecondCopyWithImpl<_$CheckPasswordSecond>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
+    required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() login,
+  }) {
+    return passwordCheckSecond(password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
+    TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? login,
+  }) {
+    return passwordCheckSecond?.call(password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
+    TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? login,
+    required TResult orElse(),
+  }) {
+    if (passwordCheckSecond != null) {
+      return passwordCheckSecond(password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
+    required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(Logging value) login,
+  }) {
+    return passwordCheckSecond(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
+    TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(Logging value)? login,
+  }) {
+    return passwordCheckSecond?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
+    TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(Logging value)? login,
+    required TResult orElse(),
+  }) {
+    if (passwordCheckSecond != null) {
+      return passwordCheckSecond(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CheckPasswordSecond implements AuthEvent {
+  const factory CheckPasswordSecond(final String? password) =
+      _$CheckPasswordSecond;
+
+  String? get password;
+  @JsonKey(ignore: true)
+  _$$CheckPasswordSecondCopyWith<_$CheckPasswordSecond> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangePasswordCopyWith<$Res> {
+  factory _$$ChangePasswordCopyWith(
+          _$ChangePassword value, $Res Function(_$ChangePassword) then) =
+      __$$ChangePasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangePasswordCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$ChangePassword>
+    implements _$$ChangePasswordCopyWith<$Res> {
+  __$$ChangePasswordCopyWithImpl(
+      _$ChangePassword _value, $Res Function(_$ChangePassword) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangePassword implements ChangePassword {
+  const _$ChangePassword();
+
+  @override
+  String toString() {
+    return 'AuthEvent.changePassowrd()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ChangePassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
+    required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() login,
+  }) {
+    return changePassowrd();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
+    TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? login,
+  }) {
+    return changePassowrd?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
+    TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? login,
+    required TResult orElse(),
+  }) {
+    if (changePassowrd != null) {
+      return changePassowrd();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
+    required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(Logging value) login,
+  }) {
+    return changePassowrd(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
+    TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(Logging value)? login,
+  }) {
+    return changePassowrd?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
+    TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(Logging value)? login,
+    required TResult orElse(),
+  }) {
+    if (changePassowrd != null) {
+      return changePassowrd(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangePassword implements AuthEvent {
+  const factory ChangePassword() = _$ChangePassword;
 }
 
 /// @nodoc
@@ -411,7 +792,11 @@ class _$CheckUserName implements CheckUserName {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
     required TResult Function() login,
   }) {
     return userNameCheck(userName);
@@ -422,7 +807,11 @@ class _$CheckUserName implements CheckUserName {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
     TResult? Function()? login,
   }) {
     return userNameCheck?.call(userName);
@@ -433,7 +822,11 @@ class _$CheckUserName implements CheckUserName {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -446,9 +839,13 @@ class _$CheckUserName implements CheckUserName {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(Started value) started,
     required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
     required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
     required TResult Function(Logging value) login,
   }) {
     return userNameCheck(this);
@@ -457,9 +854,13 @@ class _$CheckUserName implements CheckUserName {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(Started value)? started,
     TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
     TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
     TResult? Function(Logging value)? login,
   }) {
     return userNameCheck?.call(this);
@@ -468,9 +869,13 @@ class _$CheckUserName implements CheckUserName {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(Started value)? started,
     TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
     TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -487,6 +892,343 @@ abstract class CheckUserName implements AuthEvent {
   String? get userName;
   @JsonKey(ignore: true)
   _$$CheckUserNameCopyWith<_$CheckUserName> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CheckOTPCopyWith<$Res> {
+  factory _$$CheckOTPCopyWith(
+          _$CheckOTP value, $Res Function(_$CheckOTP) then) =
+      __$$CheckOTPCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? otp});
+}
+
+/// @nodoc
+class __$$CheckOTPCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$CheckOTP>
+    implements _$$CheckOTPCopyWith<$Res> {
+  __$$CheckOTPCopyWithImpl(_$CheckOTP _value, $Res Function(_$CheckOTP) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? otp = freezed,
+  }) {
+    return _then(_$CheckOTP(
+      freezed == otp
+          ? _value.otp
+          : otp // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CheckOTP implements CheckOTP {
+  const _$CheckOTP(this.otp);
+
+  @override
+  final String? otp;
+
+  @override
+  String toString() {
+    return 'AuthEvent.checkOTPNumber(otp: $otp)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CheckOTP &&
+            (identical(other.otp, otp) || other.otp == otp));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, otp);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CheckOTPCopyWith<_$CheckOTP> get copyWith =>
+      __$$CheckOTPCopyWithImpl<_$CheckOTP>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
+    required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() login,
+  }) {
+    return checkOTPNumber(otp);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
+    TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? login,
+  }) {
+    return checkOTPNumber?.call(otp);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
+    TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? login,
+    required TResult orElse(),
+  }) {
+    if (checkOTPNumber != null) {
+      return checkOTPNumber(otp);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
+    required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(Logging value) login,
+  }) {
+    return checkOTPNumber(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
+    TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(Logging value)? login,
+  }) {
+    return checkOTPNumber?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
+    TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(Logging value)? login,
+    required TResult orElse(),
+  }) {
+    if (checkOTPNumber != null) {
+      return checkOTPNumber(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CheckOTP implements AuthEvent {
+  const factory CheckOTP(final String? otp) = _$CheckOTP;
+
+  String? get otp;
+  @JsonKey(ignore: true)
+  _$$CheckOTPCopyWith<_$CheckOTP> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetOTPForEmailCopyWith<$Res> {
+  factory _$$GetOTPForEmailCopyWith(
+          _$GetOTPForEmail value, $Res Function(_$GetOTPForEmail) then) =
+      __$$GetOTPForEmailCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? email});
+}
+
+/// @nodoc
+class __$$GetOTPForEmailCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$GetOTPForEmail>
+    implements _$$GetOTPForEmailCopyWith<$Res> {
+  __$$GetOTPForEmailCopyWithImpl(
+      _$GetOTPForEmail _value, $Res Function(_$GetOTPForEmail) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = freezed,
+  }) {
+    return _then(_$GetOTPForEmail(
+      freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetOTPForEmail implements GetOTPForEmail {
+  const _$GetOTPForEmail(this.email);
+
+  @override
+  final String? email;
+
+  @override
+  String toString() {
+    return 'AuthEvent.getOTPforEmail(email: $email)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetOTPForEmail &&
+            (identical(other.email, email) || other.email == email));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetOTPForEmailCopyWith<_$GetOTPForEmail> get copyWith =>
+      __$$GetOTPForEmailCopyWithImpl<_$GetOTPForEmail>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
+    required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
+    required TResult Function() login,
+  }) {
+    return getOTPforEmail(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
+    TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
+    TResult? Function()? login,
+  }) {
+    return getOTPforEmail?.call(email);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
+    TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
+    TResult Function()? login,
+    required TResult orElse(),
+  }) {
+    if (getOTPforEmail != null) {
+      return getOTPforEmail(email);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Started value) started,
+    required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
+    required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
+    required TResult Function(Logging value) login,
+  }) {
+    return getOTPforEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Started value)? started,
+    TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
+    TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult? Function(Logging value)? login,
+  }) {
+    return getOTPforEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Started value)? started,
+    TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
+    TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
+    TResult Function(Logging value)? login,
+    required TResult orElse(),
+  }) {
+    if (getOTPforEmail != null) {
+      return getOTPforEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetOTPForEmail implements AuthEvent {
+  const factory GetOTPForEmail(final String? email) = _$GetOTPForEmail;
+
+  String? get email;
+  @JsonKey(ignore: true)
+  _$$GetOTPForEmailCopyWith<_$GetOTPForEmail> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -528,7 +1270,11 @@ class _$Logging implements Logging {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function(String? password) passwordCheck,
+    required TResult Function(String? password) passwordCheckSecond,
+    required TResult Function() changePassowrd,
     required TResult Function(String? userName) userNameCheck,
+    required TResult Function(String? otp) checkOTPNumber,
+    required TResult Function(String? email) getOTPforEmail,
     required TResult Function() login,
   }) {
     return login();
@@ -539,7 +1285,11 @@ class _$Logging implements Logging {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function(String? password)? passwordCheck,
+    TResult? Function(String? password)? passwordCheckSecond,
+    TResult? Function()? changePassowrd,
     TResult? Function(String? userName)? userNameCheck,
+    TResult? Function(String? otp)? checkOTPNumber,
+    TResult? Function(String? email)? getOTPforEmail,
     TResult? Function()? login,
   }) {
     return login?.call();
@@ -550,7 +1300,11 @@ class _$Logging implements Logging {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function(String? password)? passwordCheck,
+    TResult Function(String? password)? passwordCheckSecond,
+    TResult Function()? changePassowrd,
     TResult Function(String? userName)? userNameCheck,
+    TResult Function(String? otp)? checkOTPNumber,
+    TResult Function(String? email)? getOTPforEmail,
     TResult Function()? login,
     required TResult orElse(),
   }) {
@@ -563,9 +1317,13 @@ class _$Logging implements Logging {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(Started value) started,
     required TResult Function(CheckPassword value) passwordCheck,
+    required TResult Function(CheckPasswordSecond value) passwordCheckSecond,
+    required TResult Function(ChangePassword value) changePassowrd,
     required TResult Function(CheckUserName value) userNameCheck,
+    required TResult Function(CheckOTP value) checkOTPNumber,
+    required TResult Function(GetOTPForEmail value) getOTPforEmail,
     required TResult Function(Logging value) login,
   }) {
     return login(this);
@@ -574,9 +1332,13 @@ class _$Logging implements Logging {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(Started value)? started,
     TResult? Function(CheckPassword value)? passwordCheck,
+    TResult? Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult? Function(ChangePassword value)? changePassowrd,
     TResult? Function(CheckUserName value)? userNameCheck,
+    TResult? Function(CheckOTP value)? checkOTPNumber,
+    TResult? Function(GetOTPForEmail value)? getOTPforEmail,
     TResult? Function(Logging value)? login,
   }) {
     return login?.call(this);
@@ -585,9 +1347,13 @@ class _$Logging implements Logging {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(Started value)? started,
     TResult Function(CheckPassword value)? passwordCheck,
+    TResult Function(CheckPasswordSecond value)? passwordCheckSecond,
+    TResult Function(ChangePassword value)? changePassowrd,
     TResult Function(CheckUserName value)? userNameCheck,
+    TResult Function(CheckOTP value)? checkOTPNumber,
+    TResult Function(GetOTPForEmail value)? getOTPforEmail,
     TResult Function(Logging value)? login,
     required TResult orElse(),
   }) {
@@ -610,10 +1376,18 @@ mixin _$AuthState {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -622,9 +1396,17 @@ mixin _$AuthState {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -633,43 +1415,75 @@ mixin _$AuthState {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -693,24 +1507,23 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+class __$$InitialCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$Initial>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$Initial implements Initial {
+  const _$Initial();
 
   @override
   String toString() {
@@ -720,7 +1533,7 @@ class _$_Initial implements _Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -733,10 +1546,18 @@ class _$_Initial implements _Initial {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return initial();
   }
@@ -748,9 +1569,17 @@ class _$_Initial implements _Initial {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return initial?.call();
   }
@@ -762,9 +1591,17 @@ class _$_Initial implements _Initial {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -776,13 +1613,21 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return initial(this);
   }
@@ -790,13 +1635,21 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return initial?.call(this);
   }
@@ -804,13 +1657,21 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -820,8 +1681,8 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements AuthState {
-  const factory _Initial() = _$_Initial;
+abstract class Initial implements AuthState {
+  const factory Initial() = _$Initial;
 }
 
 /// @nodoc
@@ -866,10 +1727,18 @@ class _$LoginDone implements LoginDone {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return loginDone();
   }
@@ -881,9 +1750,17 @@ class _$LoginDone implements LoginDone {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return loginDone?.call();
   }
@@ -895,9 +1772,17 @@ class _$LoginDone implements LoginDone {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (loginDone != null) {
@@ -909,13 +1794,21 @@ class _$LoginDone implements LoginDone {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return loginDone(this);
   }
@@ -923,13 +1816,21 @@ class _$LoginDone implements LoginDone {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return loginDone?.call(this);
   }
@@ -937,13 +1838,21 @@ class _$LoginDone implements LoginDone {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (loginDone != null) {
@@ -999,10 +1908,18 @@ class _$CorrectUserName implements CorrectUserName {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return correctUserName();
   }
@@ -1014,9 +1931,17 @@ class _$CorrectUserName implements CorrectUserName {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return correctUserName?.call();
   }
@@ -1028,9 +1953,17 @@ class _$CorrectUserName implements CorrectUserName {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (correctUserName != null) {
@@ -1042,13 +1975,21 @@ class _$CorrectUserName implements CorrectUserName {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return correctUserName(this);
   }
@@ -1056,13 +1997,21 @@ class _$CorrectUserName implements CorrectUserName {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return correctUserName?.call(this);
   }
@@ -1070,13 +2019,21 @@ class _$CorrectUserName implements CorrectUserName {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (correctUserName != null) {
@@ -1132,10 +2089,18 @@ class _$CorrectPassword implements CorrectPassword {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return correctPassword();
   }
@@ -1147,9 +2112,17 @@ class _$CorrectPassword implements CorrectPassword {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return correctPassword?.call();
   }
@@ -1161,9 +2134,17 @@ class _$CorrectPassword implements CorrectPassword {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (correctPassword != null) {
@@ -1175,13 +2156,21 @@ class _$CorrectPassword implements CorrectPassword {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return correctPassword(this);
   }
@@ -1189,13 +2178,21 @@ class _$CorrectPassword implements CorrectPassword {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return correctPassword?.call(this);
   }
@@ -1203,13 +2200,21 @@ class _$CorrectPassword implements CorrectPassword {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (correctPassword != null) {
@@ -1221,6 +2226,1272 @@ class _$CorrectPassword implements CorrectPassword {
 
 abstract class CorrectPassword implements AuthState {
   const factory CorrectPassword() = _$CorrectPassword;
+}
+
+/// @nodoc
+abstract class _$$CorrectOTPCopyWith<$Res> {
+  factory _$$CorrectOTPCopyWith(
+          _$CorrectOTP value, $Res Function(_$CorrectOTP) then) =
+      __$$CorrectOTPCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CorrectOTPCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$CorrectOTP>
+    implements _$$CorrectOTPCopyWith<$Res> {
+  __$$CorrectOTPCopyWithImpl(
+      _$CorrectOTP _value, $Res Function(_$CorrectOTP) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CorrectOTP implements CorrectOTP {
+  const _$CorrectOTP();
+
+  @override
+  String toString() {
+    return 'AuthState.correctOTP()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CorrectOTP);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return correctOTP();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return correctOTP?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (correctOTP != null) {
+      return correctOTP();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return correctOTP(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return correctOTP?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (correctOTP != null) {
+      return correctOTP(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CorrectOTP implements AuthState {
+  const factory CorrectOTP() = _$CorrectOTP;
+}
+
+/// @nodoc
+abstract class _$$WrongOTPCopyWith<$Res> {
+  factory _$$WrongOTPCopyWith(
+          _$WrongOTP value, $Res Function(_$WrongOTP) then) =
+      __$$WrongOTPCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$WrongOTPCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$WrongOTP>
+    implements _$$WrongOTPCopyWith<$Res> {
+  __$$WrongOTPCopyWithImpl(_$WrongOTP _value, $Res Function(_$WrongOTP) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$WrongOTP implements WrongOTP {
+  const _$WrongOTP();
+
+  @override
+  String toString() {
+    return 'AuthState.wrongOTP()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$WrongOTP);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return wrongOTP();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return wrongOTP?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (wrongOTP != null) {
+      return wrongOTP();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return wrongOTP(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return wrongOTP?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (wrongOTP != null) {
+      return wrongOTP(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WrongOTP implements AuthState {
+  const factory WrongOTP() = _$WrongOTP;
+}
+
+/// @nodoc
+abstract class _$$PasswordsNotSameCopyWith<$Res> {
+  factory _$$PasswordsNotSameCopyWith(
+          _$PasswordsNotSame value, $Res Function(_$PasswordsNotSame) then) =
+      __$$PasswordsNotSameCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PasswordsNotSameCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$PasswordsNotSame>
+    implements _$$PasswordsNotSameCopyWith<$Res> {
+  __$$PasswordsNotSameCopyWithImpl(
+      _$PasswordsNotSame _value, $Res Function(_$PasswordsNotSame) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$PasswordsNotSame implements PasswordsNotSame {
+  const _$PasswordsNotSame();
+
+  @override
+  String toString() {
+    return 'AuthState.passwordsNotSame()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PasswordsNotSame);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return passwordsNotSame();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return passwordsNotSame?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (passwordsNotSame != null) {
+      return passwordsNotSame();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return passwordsNotSame(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return passwordsNotSame?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (passwordsNotSame != null) {
+      return passwordsNotSame(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PasswordsNotSame implements AuthState {
+  const factory PasswordsNotSame() = _$PasswordsNotSame;
+}
+
+/// @nodoc
+abstract class _$$PasswordChangingCopyWith<$Res> {
+  factory _$$PasswordChangingCopyWith(
+          _$PasswordChanging value, $Res Function(_$PasswordChanging) then) =
+      __$$PasswordChangingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PasswordChangingCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$PasswordChanging>
+    implements _$$PasswordChangingCopyWith<$Res> {
+  __$$PasswordChangingCopyWithImpl(
+      _$PasswordChanging _value, $Res Function(_$PasswordChanging) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$PasswordChanging implements PasswordChanging {
+  const _$PasswordChanging();
+
+  @override
+  String toString() {
+    return 'AuthState.passwordChanging()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PasswordChanging);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return passwordChanging();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return passwordChanging?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (passwordChanging != null) {
+      return passwordChanging();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return passwordChanging(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return passwordChanging?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (passwordChanging != null) {
+      return passwordChanging(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PasswordChanging implements AuthState {
+  const factory PasswordChanging() = _$PasswordChanging;
+}
+
+/// @nodoc
+abstract class _$$ChangePasswordDoneCopyWith<$Res> {
+  factory _$$ChangePasswordDoneCopyWith(_$ChangePasswordDone value,
+          $Res Function(_$ChangePasswordDone) then) =
+      __$$ChangePasswordDoneCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangePasswordDoneCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ChangePasswordDone>
+    implements _$$ChangePasswordDoneCopyWith<$Res> {
+  __$$ChangePasswordDoneCopyWithImpl(
+      _$ChangePasswordDone _value, $Res Function(_$ChangePasswordDone) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangePasswordDone implements ChangePasswordDone {
+  const _$ChangePasswordDone();
+
+  @override
+  String toString() {
+    return 'AuthState.changePasswordDone()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ChangePasswordDone);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return changePasswordDone();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return changePasswordDone?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (changePasswordDone != null) {
+      return changePasswordDone();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return changePasswordDone(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return changePasswordDone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (changePasswordDone != null) {
+      return changePasswordDone(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangePasswordDone implements AuthState {
+  const factory ChangePasswordDone() = _$ChangePasswordDone;
+}
+
+/// @nodoc
+abstract class _$$ChangePasswordErrorCopyWith<$Res> {
+  factory _$$ChangePasswordErrorCopyWith(_$ChangePasswordError value,
+          $Res Function(_$ChangePasswordError) then) =
+      __$$ChangePasswordErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangePasswordErrorCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$ChangePasswordError>
+    implements _$$ChangePasswordErrorCopyWith<$Res> {
+  __$$ChangePasswordErrorCopyWithImpl(
+      _$ChangePasswordError _value, $Res Function(_$ChangePasswordError) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangePasswordError implements ChangePasswordError {
+  const _$ChangePasswordError();
+
+  @override
+  String toString() {
+    return 'AuthState.changePasswordError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ChangePasswordError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return changePasswordError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return changePasswordError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (changePasswordError != null) {
+      return changePasswordError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return changePasswordError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return changePasswordError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (changePasswordError != null) {
+      return changePasswordError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangePasswordError implements AuthState {
+  const factory ChangePasswordError() = _$ChangePasswordError;
+}
+
+/// @nodoc
+abstract class _$$OtpCheckingCopyWith<$Res> {
+  factory _$$OtpCheckingCopyWith(
+          _$OtpChecking value, $Res Function(_$OtpChecking) then) =
+      __$$OtpCheckingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OtpCheckingCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$OtpChecking>
+    implements _$$OtpCheckingCopyWith<$Res> {
+  __$$OtpCheckingCopyWithImpl(
+      _$OtpChecking _value, $Res Function(_$OtpChecking) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OtpChecking implements OtpChecking {
+  const _$OtpChecking();
+
+  @override
+  String toString() {
+    return 'AuthState.otpChecking()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OtpChecking);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return otpChecking();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return otpChecking?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (otpChecking != null) {
+      return otpChecking();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return otpChecking(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return otpChecking?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (otpChecking != null) {
+      return otpChecking(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OtpChecking implements AuthState {
+  const factory OtpChecking() = _$OtpChecking;
 }
 
 /// @nodoc
@@ -1292,10 +3563,18 @@ class _$WrongPassword implements WrongPassword {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return wrongPassword(authFailure);
   }
@@ -1307,9 +3586,17 @@ class _$WrongPassword implements WrongPassword {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return wrongPassword?.call(authFailure);
   }
@@ -1321,9 +3608,17 @@ class _$WrongPassword implements WrongPassword {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1335,13 +3630,21 @@ class _$WrongPassword implements WrongPassword {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return wrongPassword(this);
   }
@@ -1349,13 +3652,21 @@ class _$WrongPassword implements WrongPassword {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return wrongPassword?.call(this);
   }
@@ -1363,13 +3674,21 @@ class _$WrongPassword implements WrongPassword {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -1458,10 +3777,18 @@ class _$WrongUserName implements WrongUserName {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return wrongUserName(authEntityFailure);
   }
@@ -1473,9 +3800,17 @@ class _$WrongUserName implements WrongUserName {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return wrongUserName?.call(authEntityFailure);
   }
@@ -1487,9 +3822,17 @@ class _$WrongUserName implements WrongUserName {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (wrongUserName != null) {
@@ -1501,13 +3844,21 @@ class _$WrongUserName implements WrongUserName {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return wrongUserName(this);
   }
@@ -1515,13 +3866,21 @@ class _$WrongUserName implements WrongUserName {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return wrongUserName?.call(this);
   }
@@ -1529,13 +3888,21 @@ class _$WrongUserName implements WrongUserName {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (wrongUserName != null) {
@@ -1624,10 +3991,18 @@ class _$LoginError implements LoginError {
     required TResult Function() loginDone,
     required TResult Function() correctUserName,
     required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
     required TResult Function(AuthEntityFailure authFailure) wrongPassword,
     required TResult Function(AuthEntityFailure authEntityFailure)
         wrongUserName,
     required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
   }) {
     return loginError(authFailure);
   }
@@ -1639,9 +4014,17 @@ class _$LoginError implements LoginError {
     TResult? Function()? loginDone,
     TResult? Function()? correctUserName,
     TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
     TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
   }) {
     return loginError?.call(authFailure);
   }
@@ -1653,9 +4036,17 @@ class _$LoginError implements LoginError {
     TResult Function()? loginDone,
     TResult Function()? correctUserName,
     TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
     TResult Function(AuthEntityFailure authFailure)? wrongPassword,
     TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
     TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
     required TResult orElse(),
   }) {
     if (loginError != null) {
@@ -1667,13 +4058,21 @@ class _$LoginError implements LoginError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(Initial value) initial,
     required TResult Function(LoginDone value) loginDone,
     required TResult Function(CorrectUserName value) correctUserName,
     required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(WrongUserName value) wrongUserName,
     required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
   }) {
     return loginError(this);
   }
@@ -1681,13 +4080,21 @@ class _$LoginError implements LoginError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
+    TResult? Function(Initial value)? initial,
     TResult? Function(LoginDone value)? loginDone,
     TResult? Function(CorrectUserName value)? correctUserName,
     TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(WrongUserName value)? wrongUserName,
     TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
   }) {
     return loginError?.call(this);
   }
@@ -1695,13 +4102,21 @@ class _$LoginError implements LoginError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(Initial value)? initial,
     TResult Function(LoginDone value)? loginDone,
     TResult Function(CorrectUserName value)? correctUserName,
     TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(WrongUserName value)? wrongUserName,
     TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
     required TResult orElse(),
   }) {
     if (loginError != null) {
@@ -1719,4 +4134,185 @@ abstract class LoginError implements AuthState {
   @JsonKey(ignore: true)
   _$$LoginErrorCopyWith<_$LoginError> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoggingStateCopyWith<$Res> {
+  factory _$$LoggingStateCopyWith(
+          _$LoggingState value, $Res Function(_$LoggingState) then) =
+      __$$LoggingStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoggingStateCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$LoggingState>
+    implements _$$LoggingStateCopyWith<$Res> {
+  __$$LoggingStateCopyWithImpl(
+      _$LoggingState _value, $Res Function(_$LoggingState) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoggingState implements LoggingState {
+  const _$LoggingState();
+
+  @override
+  String toString() {
+    return 'AuthState.logging()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoggingState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loginDone,
+    required TResult Function() correctUserName,
+    required TResult Function() correctPassword,
+    required TResult Function() correctOTP,
+    required TResult Function() wrongOTP,
+    required TResult Function() passwordsNotSame,
+    required TResult Function() passwordChanging,
+    required TResult Function() changePasswordDone,
+    required TResult Function() changePasswordError,
+    required TResult Function() otpChecking,
+    required TResult Function(AuthEntityFailure authFailure) wrongPassword,
+    required TResult Function(AuthEntityFailure authEntityFailure)
+        wrongUserName,
+    required TResult Function(AuthFailure authFailure) loginError,
+    required TResult Function() logging,
+  }) {
+    return logging();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loginDone,
+    TResult? Function()? correctUserName,
+    TResult? Function()? correctPassword,
+    TResult? Function()? correctOTP,
+    TResult? Function()? wrongOTP,
+    TResult? Function()? passwordsNotSame,
+    TResult? Function()? passwordChanging,
+    TResult? Function()? changePasswordDone,
+    TResult? Function()? changePasswordError,
+    TResult? Function()? otpChecking,
+    TResult? Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult? Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult? Function(AuthFailure authFailure)? loginError,
+    TResult? Function()? logging,
+  }) {
+    return logging?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loginDone,
+    TResult Function()? correctUserName,
+    TResult Function()? correctPassword,
+    TResult Function()? correctOTP,
+    TResult Function()? wrongOTP,
+    TResult Function()? passwordsNotSame,
+    TResult Function()? passwordChanging,
+    TResult Function()? changePasswordDone,
+    TResult Function()? changePasswordError,
+    TResult Function()? otpChecking,
+    TResult Function(AuthEntityFailure authFailure)? wrongPassword,
+    TResult Function(AuthEntityFailure authEntityFailure)? wrongUserName,
+    TResult Function(AuthFailure authFailure)? loginError,
+    TResult Function()? logging,
+    required TResult orElse(),
+  }) {
+    if (logging != null) {
+      return logging();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(LoginDone value) loginDone,
+    required TResult Function(CorrectUserName value) correctUserName,
+    required TResult Function(CorrectPassword value) correctPassword,
+    required TResult Function(CorrectOTP value) correctOTP,
+    required TResult Function(WrongOTP value) wrongOTP,
+    required TResult Function(PasswordsNotSame value) passwordsNotSame,
+    required TResult Function(PasswordChanging value) passwordChanging,
+    required TResult Function(ChangePasswordDone value) changePasswordDone,
+    required TResult Function(ChangePasswordError value) changePasswordError,
+    required TResult Function(OtpChecking value) otpChecking,
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(WrongUserName value) wrongUserName,
+    required TResult Function(LoginError value) loginError,
+    required TResult Function(LoggingState value) logging,
+  }) {
+    return logging(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(LoginDone value)? loginDone,
+    TResult? Function(CorrectUserName value)? correctUserName,
+    TResult? Function(CorrectPassword value)? correctPassword,
+    TResult? Function(CorrectOTP value)? correctOTP,
+    TResult? Function(WrongOTP value)? wrongOTP,
+    TResult? Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult? Function(PasswordChanging value)? passwordChanging,
+    TResult? Function(ChangePasswordDone value)? changePasswordDone,
+    TResult? Function(ChangePasswordError value)? changePasswordError,
+    TResult? Function(OtpChecking value)? otpChecking,
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(WrongUserName value)? wrongUserName,
+    TResult? Function(LoginError value)? loginError,
+    TResult? Function(LoggingState value)? logging,
+  }) {
+    return logging?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(LoginDone value)? loginDone,
+    TResult Function(CorrectUserName value)? correctUserName,
+    TResult Function(CorrectPassword value)? correctPassword,
+    TResult Function(CorrectOTP value)? correctOTP,
+    TResult Function(WrongOTP value)? wrongOTP,
+    TResult Function(PasswordsNotSame value)? passwordsNotSame,
+    TResult Function(PasswordChanging value)? passwordChanging,
+    TResult Function(ChangePasswordDone value)? changePasswordDone,
+    TResult Function(ChangePasswordError value)? changePasswordError,
+    TResult Function(OtpChecking value)? otpChecking,
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(WrongUserName value)? wrongUserName,
+    TResult Function(LoginError value)? loginError,
+    TResult Function(LoggingState value)? logging,
+    required TResult orElse(),
+  }) {
+    if (logging != null) {
+      return logging(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoggingState implements AuthState {
+  const factory LoggingState() = _$LoggingState;
 }

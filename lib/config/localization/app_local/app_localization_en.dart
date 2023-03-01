@@ -6,7 +6,7 @@ import 'package:line_up/config/localization/app_local/app_localization.dart';
 class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
-  Map<String, dynamic> translate = jsonDecode(jsonString);
+  static Map<String, dynamic> translate = jsonDecode(jsonStringEn);
   @override
   String get setting => translate['setting'];
 
@@ -29,7 +29,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get englishWord => translate["englishWord"];
 }
 
-const String jsonString = """
+const String jsonStringEn = """
     {
     "setting": "Setting",
     "arabicLanguage" : "Arabic Language",

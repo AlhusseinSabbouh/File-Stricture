@@ -1,8 +1,7 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:line_up/config/shared_prefrences/local_app_prefs.dart';
-import 'package:line_up/config/shared_prefrences/theme_app_prefs.dart';
 
 part 'local_state.dart';
 part 'local_cubit.freezed.dart';
@@ -12,8 +11,7 @@ class LocalCubit extends Cubit<LocalState> {
 
   LocalCubit(this._appPreferences)
       : super(const LocalState.initial(Locale('en'))) {
-    _appPreferences.getLocaleApp().then((locale) =>
-        emit(LocalState.selectLocal(_appPreferences.getCurrentlocale(locale))));
+    // emit(LocalState.selectLocal(_appPreferences.getLocaleApp().local));
   }
 
   void toArabic() async {
@@ -25,6 +23,15 @@ class LocalCubit extends Cubit<LocalState> {
     await _appPreferences.setLocale(AppLocalesEnum.english);
     emit(const LocalState.selectLocal(Locale("en")));
   }
+
+  // bool isEnglis() {
+  //   switch (_appPreferences.getLocaleApp()) {
+  //     case AppLocalesEnum.arabic:
+  //       return false;
+  //     case AppLocalesEnum.english:
+  //       return true;
+  //   }
+  // }
 
   @override
   Future<void> close() {

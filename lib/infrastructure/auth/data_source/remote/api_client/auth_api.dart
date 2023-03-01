@@ -3,6 +3,7 @@
 import 'package:dio/dio.dart';
 import 'package:line_up/infrastructure/auth/dto/response/user/user_dto.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:http/http.dart' as http;
 
 part 'auth_api.g.dart';
 
@@ -16,3 +17,9 @@ abstract class AuthClient {
   Future<UserDto>? login(
       @Field("email") String email, @Field("password") String password);
 }
+
+
+// class AuthHttpClient{
+//   var url = Uri.https(authority) 
+//   var url1 = Uri.http(authority)
+// }
