@@ -27,6 +27,7 @@ mixin _$ReservationResponse {
   String get numOfDay => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
   String get endTime => throw _privateConstructorUsedError;
+  String get score => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,7 +48,8 @@ abstract class $ReservationResponseCopyWith<$Res> {
       String space,
       String numOfDay,
       String startTime,
-      String endTime});
+      String endTime,
+      String score});
 }
 
 /// @nodoc
@@ -70,6 +72,7 @@ class _$ReservationResponseCopyWithImpl<$Res, $Val extends ReservationResponse>
     Object? numOfDay = null,
     Object? startTime = null,
     Object? endTime = null,
+    Object? score = null,
   }) {
     return _then(_value.copyWith(
       reservationID: null == reservationID
@@ -100,6 +103,10 @@ class _$ReservationResponseCopyWithImpl<$Res, $Val extends ReservationResponse>
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
               as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -119,7 +126,8 @@ abstract class _$$_ReservationResponseCopyWith<$Res>
       String space,
       String numOfDay,
       String startTime,
-      String endTime});
+      String endTime,
+      String score});
 }
 
 /// @nodoc
@@ -140,6 +148,7 @@ class __$$_ReservationResponseCopyWithImpl<$Res>
     Object? numOfDay = null,
     Object? startTime = null,
     Object? endTime = null,
+    Object? score = null,
   }) {
     return _then(_$_ReservationResponse(
       reservationID: null == reservationID
@@ -170,6 +179,10 @@ class __$$_ReservationResponseCopyWithImpl<$Res>
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
               as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -184,7 +197,8 @@ class _$_ReservationResponse implements _ReservationResponse {
       required this.space,
       required this.numOfDay,
       required this.startTime,
-      required this.endTime});
+      required this.endTime,
+      required this.score});
 
   factory _$_ReservationResponse.fromJson(Map<String, dynamic> json) =>
       _$$_ReservationResponseFromJson(json);
@@ -203,10 +217,12 @@ class _$_ReservationResponse implements _ReservationResponse {
   final String startTime;
   @override
   final String endTime;
+  @override
+  final String score;
 
   @override
   String toString() {
-    return 'ReservationResponse(reservationID: $reservationID, date: $date, zone: $zone, space: $space, numOfDay: $numOfDay, startTime: $startTime, endTime: $endTime)';
+    return 'ReservationResponse(reservationID: $reservationID, date: $date, zone: $zone, space: $space, numOfDay: $numOfDay, startTime: $startTime, endTime: $endTime, score: $score)';
   }
 
   @override
@@ -223,13 +239,14 @@ class _$_ReservationResponse implements _ReservationResponse {
                 other.numOfDay == numOfDay) &&
             (identical(other.startTime, startTime) ||
                 other.startTime == startTime) &&
-            (identical(other.endTime, endTime) || other.endTime == endTime));
+            (identical(other.endTime, endTime) || other.endTime == endTime) &&
+            (identical(other.score, score) || other.score == score));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, reservationID, date, zone, space,
-      numOfDay, startTime, endTime);
+      numOfDay, startTime, endTime, score);
 
   @JsonKey(ignore: true)
   @override
@@ -254,7 +271,8 @@ abstract class _ReservationResponse implements ReservationResponse {
       required final String space,
       required final String numOfDay,
       required final String startTime,
-      required final String endTime}) = _$_ReservationResponse;
+      required final String endTime,
+      required final String score}) = _$_ReservationResponse;
 
   factory _ReservationResponse.fromJson(Map<String, dynamic> json) =
       _$_ReservationResponse.fromJson;
@@ -273,6 +291,8 @@ abstract class _ReservationResponse implements ReservationResponse {
   String get startTime;
   @override
   String get endTime;
+  @override
+  String get score;
   @override
   @JsonKey(ignore: true)
   _$$_ReservationResponseCopyWith<_$_ReservationResponse> get copyWith =>

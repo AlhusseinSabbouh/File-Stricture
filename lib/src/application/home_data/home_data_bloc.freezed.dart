@@ -1866,10 +1866,10 @@ class __$$ErrorLoadingDataCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failure = freezed,
+    Object? failure = null,
   }) {
     return _then(_$ErrorLoadingData(
-      failure: freezed == failure
+      failure: null == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
               as ReservationFailure,
@@ -1905,12 +1905,11 @@ class _$ErrorLoadingData
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorLoadingData &&
-            const DeepCollectionEquality().equals(other.failure, failure));
+            (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
+  int get hashCode => Object.hash(runtimeType, failure);
 
   @JsonKey(ignore: true)
   @override

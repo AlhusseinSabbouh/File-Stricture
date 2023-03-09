@@ -4568,10 +4568,10 @@ class __$$LoginErrorCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? authFailure = freezed,
+    Object? authFailure = null,
   }) {
     return _then(_$LoginError(
-      authFailure: freezed == authFailure
+      authFailure: null == authFailure
           ? _value.authFailure
           : authFailure // ignore: cast_nullable_to_non_nullable
               as AuthFailure,
@@ -4597,13 +4597,12 @@ class _$LoginError implements LoginError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginError &&
-            const DeepCollectionEquality()
-                .equals(other.authFailure, authFailure));
+            (identical(other.authFailure, authFailure) ||
+                other.authFailure == authFailure));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(authFailure));
+  int get hashCode => Object.hash(runtimeType, authFailure);
 
   @JsonKey(ignore: true)
   @override

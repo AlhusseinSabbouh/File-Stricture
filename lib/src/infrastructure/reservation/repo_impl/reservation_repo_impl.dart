@@ -1,4 +1,5 @@
 import 'package:fpdart/fpdart.dart';
+import 'package:line_up/src/domain/reservation/models/entity/complete_reservation.dart';
 import 'package:line_up/src/domain/reservation/models/entity/reservation.dart';
 import 'package:line_up/src/domain/reservation/failure/repo_failures.dart';
 import 'package:line_up/src/domain/auth/models/entity/user.dart';
@@ -10,13 +11,14 @@ class ReservationRepoImpl implements ReservationRepo {
   final ReservationRemoteCaller remoteCaller;
   const ReservationRepoImpl(this.remoteCaller);
   @override
-  Future<Either<ReservationFailure, List<Reservation>>> getAllmyReservation(
+  Future<Either<ReservationFailure, CompleteReservation>> getAllmyReservation(
       {required User user, required int page}) async {
     try {
       final result = await remoteCaller
           .getHomeData(ReservationDto().fromDomain(user, page));
-      var toDomainObject = ReservationDto().toDomain(result);
-      var validate = toDomainObject.map((e) {
+      var toDomainObject = ReservationDto()
+          .toDomain(result.reservationResponse, result.isMoreData);
+      var validate = toDomainObject.listOfReservation.map((e) {
         return e.isValid();
       }).toList();
 

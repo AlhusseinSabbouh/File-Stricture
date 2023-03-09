@@ -24,10 +24,10 @@ class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashScreen:
-        // return MaterialPageRoute(builder: (context) => const HomePage());
-        // return MaterialPageRoute(builder: (context) => DatePickerPage());
+        return MaterialPageRoute(builder: (context) => const HomePage());
+      // return MaterialPageRoute(builder: (context) => DatePickerPage());
 
-        return MaterialPageRoute(builder: (context) => const LoginPage());
+      // return MaterialPageRoute(builder: (context) => const LoginPage());
       case Routes.loginPage:
         return MaterialPageRoute(builder: (context) => EnterOTPNumber());
 

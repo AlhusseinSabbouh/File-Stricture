@@ -1,4 +1,3 @@
-
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 // "user_id" : "2",
@@ -17,8 +16,10 @@ import 'package:line_up/src/domain/core/models/value_object.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/date.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/end_time.dart';
 import 'package:line_up/src/domain/reservation/failure/entity_failures.dart';
+import 'package:line_up/src/domain/reservation/models/value_object/is_more_data.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/num_of_days.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/reservation_id.dart';
+import 'package:line_up/src/domain/reservation/models/value_object/score.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/space.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/start_time.dart';
 import 'package:line_up/src/domain/reservation/models/value_object/zone.dart';
@@ -31,7 +32,7 @@ class Reservation with Aggregation<ReservationValueFailure>, Entity {
   final NumOfDay numOfDay;
   final StartTime startTime;
   final EndTime endTime;
-
+  final Score score;
   Reservation({
     required this.reservationId,
     required this.date,
@@ -40,6 +41,7 @@ class Reservation with Aggregation<ReservationValueFailure>, Entity {
     required this.numOfDay,
     required this.startTime,
     required this.endTime,
+    required this.score,
   }) {
     data = List<ValueObject>.of(<ValueObject>[
       reservationId,
@@ -48,7 +50,8 @@ class Reservation with Aggregation<ReservationValueFailure>, Entity {
       space,
       numOfDay,
       startTime,
-      endTime
+      endTime,
+      score,
     ], growable: false);
   }
 }

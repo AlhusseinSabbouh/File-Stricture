@@ -16,6 +16,7 @@ _$_ReservationResponse _$$_ReservationResponseFromJson(
       numOfDay: json['numOfDay'] as String,
       startTime: json['startTime'] as String,
       endTime: json['endTime'] as String,
+      score: json['score'] as String,
     );
 
 Map<String, dynamic> _$$_ReservationResponseToJson(
@@ -28,4 +29,5 @@ Map<String, dynamic> _$$_ReservationResponseToJson(
       'numOfDay': instance.numOfDay,
       'startTime': instance.startTime,
       'endTime': instance.endTime,
+      'score': instance.score,
     };

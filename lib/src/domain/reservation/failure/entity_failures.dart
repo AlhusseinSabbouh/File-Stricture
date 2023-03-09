@@ -24,6 +24,8 @@ enum ReservationValueFailure implements FailureObject {
   endTime("invalid zone"),
   plateNo("invalid zone"),
   location("invalid zone"),
+  score("score"),
+  isMoreData("isMoreData"),
   unknown("invalid zone"),
   ;
 

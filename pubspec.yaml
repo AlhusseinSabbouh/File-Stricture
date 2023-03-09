@@ -107,7 +107,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/Holcim_Logo.png
- 
+    - assets/fexture/reservatio_response.json
+    - assets/fexture/reservatio_response2.json
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

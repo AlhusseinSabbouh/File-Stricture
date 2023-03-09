@@ -37,14 +37,16 @@ class HomeDataBloc extends Bloc<HomeDataEvent, HomeDataState> {
             },
             (r) {
               print(r);
-              data.addAll(r);
+              data.addAll(r.listOfReservation);
               emit(HomeDataState.newDataLoaded(data));
+              print("hhhhhhhhhhhhhhhhhhhhhhhh");
+              print(r.isMoreData);
+              if (r.isMoreData.getOrNull() == 0) {
+                emit(const HomeDataState.endOfDate());
+                endOfDataTrigger = true;
+              }
             },
           );
-
-          await Future.delayed(const Duration(seconds: 2));
-          emit(HomeDataState.endOfDate());
-          endOfDataTrigger = true;
 
           // (data.length < 50)
           //     ? {

@@ -23,6 +23,7 @@ void main() {
   });
 
   test("dsf", () async {
+    print(DateTime.now().toIso8601String());
     final response = await client.post(reqo);
     var decodedResponse =
         jsonDecode(utf8.decode(response.bodyBytes)) as Map<String, dynamic>;
