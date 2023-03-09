@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 enum AppColors {
-  primaryOrange(Color(0xffFF3333)),
-  darkGrey(Color(0xff666666)),
-  grey(Color(0xff737477)),
-  lightGrey(Color(0xff666666)),
-  black(Color(0xff737477)),
-  red(Color(0xffEA4335)),
-  white(Color(0xffFFFFFF)),
-  darkBlue(Color(0xff052330));
-
-  final Color color;
-  const AppColors(this.color);
+  primaryOrange,
+  darkGrey,
+  grey,
+  lightGrey,
+  black,
+  red,
+  white,
+  darkBlue;
 }
 
 class ColorManager {
@@ -44,4 +41,13 @@ class ColorManager {
         return darkBlue;
     }
   }
+}
+
+List<Color> backgroundColors() {
+  return [
+    const Color.fromARGB(255, 239, 241, 250),
+    const Color(0xffA8BFEB),
+    const Color(0xffA8BFEB),
+    const Color.fromARGB(255, 153, 185, 246),
+  ];
 }

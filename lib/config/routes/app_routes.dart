@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:line_up/application/auth/bloc/auth_bloc.dart';
-import 'package:line_up/config/dependency_injection/di.dart';
-import 'package:line_up/config/routes/const_routes.dart';
-import 'package:line_up/presentation/pages/auth/login/animation_page.dart';
-import 'package:line_up/presentation/pages/auth/login/enter_email_for_forgetten_password.dart';
-import 'package:line_up/presentation/pages/auth/login/enter_otp_number.dart';
-import 'package:line_up/domain/auth/repo/repo.dart';
-import 'package:line_up/infrastructure/auth/data_source/remote/api_client/http_client.dart';
-import 'package:line_up/infrastructure/auth/data_source/remote/api_impl/auth_api_impl.dart';
-import 'package:line_up/infrastructure/auth/data_source/remote/api_interface/auth_api_interface.dart';
-import 'package:line_up/infrastructure/auth/repo_impl/repo_impl.dart';
-import 'package:line_up/presentation/pages/auth/login/home_page.dart';
-import 'package:line_up/presentation/pages/auth/login/login_page.dart';
-import 'package:line_up/presentation/pages/auth/login/setNewPassword.dart';
-import 'package:line_up/presentation/pages/filterSearch/filter_search_page.dart';
-import 'package:line_up/presentation/pages/reservation/home/home_page.dart';
+import 'package:line_up/src/presentation/pages/auth/login/screens/enter_email_for_forgetten_password.dart';
+import 'package:line_up/src/presentation/pages/auth/login/screens/enter_otp_number.dart';
+import 'package:line_up/src/presentation/pages/auth/login/screens/home_page.dart';
+import 'package:line_up/src/presentation/pages/auth/login/screens/login_page.dart';
+import 'package:line_up/src/presentation/pages/auth/login/screens/set_new_password.dart';
+
+class Routes {
+  static const String splashScreen = "/";
+  static const String homePage = "/homePage";
+  static const String loginPage = "/loginPage";
+  static const String enterOTPNumber = "/enterOTPNumber";
+  static const String verificationPage = "/verificationPage";
+  static const String setNewPassword = "/setNewPassword";
+  static const String setRestoreEmail = "/setRestoreEmail";
+}
 
 class RouteGenerator {
   //! here we make our routes
@@ -25,33 +24,29 @@ class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashScreen:
-        initAuthPages();
-        // return MaterialPageRoute(builder: (context) => AnimationPage());
-        // return MaterialPageRoute(builder: (context) => const DatePickerPage());
+        // return MaterialPageRoute(builder: (context) => const HomePage());
+        // return MaterialPageRoute(builder: (context) => DatePickerPage());
 
-        return MaterialPageRoute(builder: (context) => LoginPage());
+        return MaterialPageRoute(builder: (context) => const LoginPage());
       case Routes.loginPage:
         return MaterialPageRoute(builder: (context) => EnterOTPNumber());
 
       case Routes.setRestoreEmail:
-        return MaterialPageRoute(builder: (context) => SetRestorEmail());
+        return MaterialPageRoute(builder: (context) => const SetRestorEmail());
       case Routes.enterOTPNumber:
         return MaterialPageRoute(builder: (context) => EnterOTPNumber());
       case Routes.verificationPage:
-        return MaterialPageRoute(builder: (context) => LoginPage());
+        return MaterialPageRoute(builder: (context) => const LoginPage());
       case Routes.homePage:
-        unregisterAuthBloc();
         return MaterialPageRoute(
-          builder: (context) => const HomePage(),
+          builder: (context) => HomePage(),
         );
       case Routes.setNewPassword:
         return MaterialPageRoute(
-          builder: (context) => SetNewPasswordPage(),
+          builder: (context) => const SetNewPasswordPage(),
         );
       default:
-        print("default");
-        initAuthPages();
-        return MaterialPageRoute(builder: (context) => LoginPage());
+        return MaterialPageRoute(builder: (context) => const LoginPage());
     }
   }
 }

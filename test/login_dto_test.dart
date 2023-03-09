@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
-import 'package:line_up/infrastructure/auth/dto/response/user/user_dto.dart';
+import 'package:line_up/src/infrastructure/auth/dto/response/user/user_dto.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;

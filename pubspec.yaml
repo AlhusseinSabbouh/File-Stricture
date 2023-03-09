@@ -53,6 +53,9 @@ dependencies:
   interval_time_picker: ^2.0.0+5
   day_night_time_picker: ^1.2.0
 
+  auto_size_text: ^3.0.0
+  awesome_dialog: ^3.0.2
+
   syncfusion_flutter_datepicker: ^20.4.51
   calendar_date_picker2: ^0.4.0
 
@@ -63,6 +66,8 @@ dependencies:
   provider: ^6.0.4
   flutter_slidable: ^2.0.0
   implicitly_animated_reorderable_list_2: ^0.4.4
+
+  visibility_detector: ^0.3.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -80,6 +85,7 @@ dev_dependencies:
   retrofit_generator: 4.2.0
   shared_preferences: ^2.0.17
   json_serializable: ^6.5.3
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

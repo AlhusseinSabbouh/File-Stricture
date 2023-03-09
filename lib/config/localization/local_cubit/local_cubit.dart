@@ -32,10 +32,4 @@ class LocalCubit extends Cubit<LocalState> {
   //       return true;
   //   }
   // }
-
-  @override
-  Future<void> close() {
-    print("we close");
-    return super.close();
-  }
 }

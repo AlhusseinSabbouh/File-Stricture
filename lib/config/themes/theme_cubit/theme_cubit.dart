@@ -1,5 +1,5 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:line_up/config/shared_prefrences/theme_app_prefs.dart';
 import 'package:line_up/config/themes/app_theme/app_theme.dart';

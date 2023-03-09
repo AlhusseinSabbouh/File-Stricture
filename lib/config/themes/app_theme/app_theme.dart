@@ -6,49 +6,55 @@ import 'package:line_up/config/shared_prefrences/theme_app_prefs.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {
+    const elevatedButtonThemeData = ElevatedButtonThemeData(
+        style: ButtonStyle(
+            // textStyle: MaterialStatePropertyAll<TextStyle>(
+            //     TextStyle(color: Colors.white, fontSize: 22.0)),
+            backgroundColor:
+                MaterialStatePropertyAll<Color>(ColorManager.darkBlue)));
+    const inputDecorationTheme2 = InputDecorationTheme(
+      floatingLabelStyle: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          backgroundColor: Color.fromARGB(95, 255, 255, 255)),
+      filled: true,
+      fillColor: Colors.white,
+      border: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: Color.fromARGB(255, 205, 222, 237), width: 2)),
+      focusedBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: Color.fromARGB(255, 205, 222, 237), width: 2)),
+      enabledBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: Color.fromARGB(255, 205, 222, 237), width: 2)),
+    );
+
     return ThemeData.light().copyWith(
-      inputDecorationTheme: const InputDecorationTheme(
-        floatingLabelStyle: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            backgroundColor: Color.fromARGB(95, 255, 255, 255)),
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-            borderSide: BorderSide(
-                color: Color.fromARGB(255, 205, 222, 237), width: 2)),
-        focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-                color: Color.fromARGB(255, 205, 222, 237), width: 2)),
-        enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-                color: Color.fromARGB(255, 205, 222, 237), width: 2)),
-      ),
-      elevatedButtonTheme: const ElevatedButtonThemeData(
-          style: ButtonStyle(
-              textStyle: MaterialStatePropertyAll<TextStyle>(
-                  TextStyle(color: Colors.white, fontSize: 22.0)),
-              backgroundColor:
-                  MaterialStatePropertyAll<Color>(ColorManager.darkBlue))),
+      inputDecorationTheme: inputDecorationTheme2,
+      elevatedButtonTheme: elevatedButtonThemeData,
       textTheme: selectTextTheme(TextThemeType.small),
+      // typography: myTyo
     );
   }
+  // static Typography myTyo = Typography(
+  //   platform: TargetPlatform.android
+  // );
 
   static ThemeData get darkTheme {
     return ThemeData.dark().copyWith(
-      textTheme: selectTextTheme(TextThemeType.large)
-      // TextTheme(
-      //     displayLarge: getBoldStyle(
-      //       appColors: AppColors.primaryOrange,
-      //       fontSize: FontSizeManager.s28,
-      //     ),
-      //     displayMedium: getMediumStyle(
-      //         appColors: AppColors.darkGrey, fontSize: FontSizeManager.s20),
-      //     displaySmall: getLightStyle(
-      //         appColors: AppColors.lightGrey, fontSize: FontSizeManager.s16))
-
-      ,
-    );
+        textTheme: selectTextTheme(TextThemeType.large)
+        // TextTheme(
+        //     displayLarge: getBoldStyle(
+        //       appColors: AppColors.primaryOrange,
+        //       fontSize: FontSizeManager.s28,
+        //     ),
+        //     displayMedium: getMediumStyle(
+        //         appColors: AppColors.darkGrey, fontSize: FontSizeManager.s20),
+        //     displaySmall: getLightStyle(
+        //         appColors: AppColors.lightGrey,
+        //         fontSize: FontSizeManager.s16)),
+        );
   }
 
   //add new theme details here
