@@ -6,17 +6,20 @@ _isCurrentDialogShowing(BuildContext context) =>
     ModalRoute.of(context)?.isCurrent != true;
 
 dismissDialog(BuildContext context) {
-  if (_isCurrentDialogShowing(context)) {
-    Navigator.of(context, rootNavigator: true).pop(true);
-  }
+  // if (_isCurrentDialogShowing(context)) {
+  //   Navigator.of(context, rootNavigator: true).pop(true);
+  // }
+  Navigator.of(context).pop();
 }
 
 Widget _getDialogContent(BuildContext context, List<Widget> children) {
-  return Column(
-    mainAxisSize: MainAxisSize.min,
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: children,
+  return FittedBox(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: children,
+    ),
   );
 }
 
@@ -38,16 +41,21 @@ Widget _getPopUpDialog(BuildContext context, List<Widget> children) {
   );
 }
 
-showPopup(BuildContext context, DialogType dialogType, String msg,
-    {String title = ""}) {
-  List<Widget> children = getChildernDilaog(dialogType, context, msg);
-  WidgetsBinding.instance.addPostFrameCallback((_) => showDialog(
+showPopup(BuildContext context,
+    {required DialogType dialogType,
+    required String msg,
+    String title = "",
+    Widget data = const Center()}) {
+  List<Widget> children =
+      getChildernDilaog(dialogType, context, msg, data: data);
+  WidgetsBinding.instance.scheduleFrameCallback((_) => showDialog(
       context: context,
       builder: (BuildContext context) => _getPopUpDialog(context, children)));
 }
 
 List<Widget> getChildernDilaog(
-    DialogType dialogType, BuildContext context, String msg) {
+    DialogType dialogType, BuildContext context, String msg,
+    {Widget data = const Center()}) {
   switch (dialogType) {
     case DialogType.error:
       return [
@@ -73,7 +81,9 @@ List<Widget> getChildernDilaog(
           child: CircularProgressIndicator(),
         )
       ];
+    case DialogType.data:
+      return [data];
   }
 }
 
-enum DialogType { error, loading }
+enum DialogType { error, loading, data }

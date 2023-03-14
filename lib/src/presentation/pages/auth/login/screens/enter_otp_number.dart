@@ -45,11 +45,13 @@ class EnterOTPNumber extends StatelessWidget {
           listener: (context, state) {
             state.maybeWhen(
                 otpChecking: () {
-                  showPopup(context, DialogType.loading, "OTP Checking");
+                  showPopup(context,
+                      dialogType: DialogType.loading, msg: "OTP Checking");
                 },
                 wrongOTP: () {
                   dismissDialog(context);
-                  showPopup(context, DialogType.error, "Wrong OTP");
+                  showPopup(context,
+                      dialogType: DialogType.error, msg: "Wrong OTP");
                 },
                 correctOTP: () {
                   Navigator.of(context).popAndPushNamed(Routes.setNewPassword);

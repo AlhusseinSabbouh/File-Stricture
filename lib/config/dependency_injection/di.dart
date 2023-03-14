@@ -58,25 +58,25 @@ Future<void> initDIApp() async {
 
 initFilterPage() {
   if (!GetIt.I.isRegistered<FilteringBloc>()) {
-    instance.registerFactory<FilterHttpClient>(() => FilterHttpClient());
-    instance.registerFactory<FilterRemoteCaller>(
+    instance.registerLazySingleton<FilterHttpClient>(() => FilterHttpClient());
+    instance.registerLazySingleton<FilterRemoteCaller>(
         () => SearchingFilterCallerImpl(instance<FilterHttpClient>()));
-    instance.registerFactory<FilterRepo>(
+    instance.registerLazySingleton<FilterRepo>(
         () => FilterRepoImpl(instance<FilterRemoteCaller>()));
-    instance.registerSingleton<FilteringBloc>(
-        FilteringBloc(instance<FilterRepo>()));
+    instance.registerLazySingleton<FilteringBloc>(
+        () => FilteringBloc(instance<FilterRepo>()));
   }
 }
 
-unregisterFilterRepo() {
-  if (GetIt.I.isRegistered<FilteringBloc>()) {
-    instance<AuthBloc>().close();
-    instance.unregister<FilterHttpClient>();
-    instance.unregister<FilterRemoteCaller>();
-    instance.unregister<FilterRepo>();
-    instance.unregister<FilteringBloc>();
-  }
-}
+// unregisterFilterRepo() {
+//   if (GetIt.I.isRegistered<FilteringBloc>()) {
+//     instance<AuthBloc>().close();
+//     instance.unregister<FilterHttpClient>();
+//     instance.unregister<FilterRemoteCaller>();
+//     instance.unregister<FilterRepo>();
+//     instance.unregister<FilteringBloc>();
+//   }
+// }
 
 // unregisterAuthBloc() async {
 //   if (GetIt.I.isRegistered<AuthBloc>()) {
@@ -90,7 +90,7 @@ unregisterFilterRepo() {
 
 AuthBloc get authBloc => instance<AuthBloc>();
 FilteringBloc get filterBloc => GetIt.I.get<FilteringBloc>();
-HomeDataBloc get homedataBloc => GetIt.I.get<HomeDataBloc>();
+HomeDataBloc get reservationBloc => GetIt.I.get<HomeDataBloc>();
 
 
 

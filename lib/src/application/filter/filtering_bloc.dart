@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:line_up/src/domain/filter/models/value_object/end_date.dart';
 import 'package:line_up/src/domain/filter/models/value_object/start_date.dart';
 import 'package:line_up/src/domain/filter/repo/filter.dart';
+import 'package:line_up/src/domain/reservation/models/entity/reservation.dart';
 
 part 'filtering_event.dart';
 part 'filtering_state.dart';
@@ -12,6 +13,7 @@ class FilteringBloc extends Bloc<FilteringEvent, FilteringState> {
   final FilterRepo filterRepo;
   double sliderHourValue = 0;
   double sliderHourNormalization = 0;
+  List<Reservation> data = [];
   int startHour = 8;
   int endHour = 9;
   bool sliderDisable = false;
@@ -43,7 +45,7 @@ class FilteringBloc extends Bloc<FilteringEvent, FilteringState> {
       endHour = tunningEndHour(sliderHourNormalization.toInt() + startHour);
       endDate = setDateByHour(endDate, endHour);
       printDates(startDate, endDate);
-      emit(FilteringState.updateHourSlider(value: event.value));
+      emit(FilteringState.updateHourSlider(value: event.value, stat: true));
     });
     on<SetStartTime>((event, emit) {
       startHour = event.startTime;
@@ -88,13 +90,24 @@ class FilteringBloc extends Bloc<FilteringEvent, FilteringState> {
       (event, emit) {
         sliderDisable = event.sliderState;
         if (sliderDisable == false) {
-          sliderHourValue = 0;
-          sliderHourNormalization = 0;
+          // sliderHourValue = 0;
+          // sliderHourNormalization = 0;
+
+          setSliderValue();
+          emit(const FilteringState.updateHourSlider(
+            value: 0,
+            stat: false,
+          ));
         } else {
           // ! sliderHourValue = normalizitionHourSlider(
           //     (endHour.toDouble() - 1) - startHour.toDouble());
           // sliderHourNormalization = settingHourSlider(sliderHourValue);
-          setSliderValue();
+          sliderHourValue = 0;
+          sliderHourNormalization = 0;
+          emit(const FilteringState.updateHourSlider(
+            value: 0,
+            stat: true,
+          ));
         }
       },
     );

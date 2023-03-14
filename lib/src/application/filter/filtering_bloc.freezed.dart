@@ -1222,50 +1222,50 @@ mixin _$FilteringState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(double value) updateHourSlider,
     required TResult Function(int value) updateStartHour,
     required TResult Function(int value) updateEndHour,
+    required TResult Function(double value, bool stat) updateHourSlider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(double value)? updateHourSlider,
     TResult? Function(int value)? updateStartHour,
     TResult? Function(int value)? updateEndHour,
+    TResult? Function(double value, bool stat)? updateHourSlider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(double value)? updateHourSlider,
     TResult Function(int value)? updateStartHour,
     TResult Function(int value)? updateEndHour,
+    TResult Function(double value, bool stat)? updateHourSlider,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(UpdateHourSlider value) updateHourSlider,
     required TResult Function(UpdateStartHour value) updateStartHour,
     required TResult Function(UpdateEndHour value) updateEndHour,
+    required TResult Function(UpdateSlider value) updateHourSlider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(UpdateHourSlider value)? updateHourSlider,
     TResult? Function(UpdateStartHour value)? updateStartHour,
     TResult? Function(UpdateEndHour value)? updateEndHour,
+    TResult? Function(UpdateSlider value)? updateHourSlider,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(UpdateHourSlider value)? updateHourSlider,
     TResult Function(UpdateStartHour value)? updateStartHour,
     TResult Function(UpdateEndHour value)? updateEndHour,
+    TResult Function(UpdateSlider value)? updateHourSlider,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1326,9 +1326,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(double value) updateHourSlider,
     required TResult Function(int value) updateStartHour,
     required TResult Function(int value) updateEndHour,
+    required TResult Function(double value, bool stat) updateHourSlider,
   }) {
     return initial();
   }
@@ -1337,9 +1337,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(double value)? updateHourSlider,
     TResult? Function(int value)? updateStartHour,
     TResult? Function(int value)? updateEndHour,
+    TResult? Function(double value, bool stat)? updateHourSlider,
   }) {
     return initial?.call();
   }
@@ -1348,9 +1348,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(double value)? updateHourSlider,
     TResult Function(int value)? updateStartHour,
     TResult Function(int value)? updateEndHour,
+    TResult Function(double value, bool stat)? updateHourSlider,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1363,9 +1363,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(UpdateHourSlider value) updateHourSlider,
     required TResult Function(UpdateStartHour value) updateStartHour,
     required TResult Function(UpdateEndHour value) updateEndHour,
+    required TResult Function(UpdateSlider value) updateHourSlider,
   }) {
     return initial(this);
   }
@@ -1374,9 +1374,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(UpdateHourSlider value)? updateHourSlider,
     TResult? Function(UpdateStartHour value)? updateStartHour,
     TResult? Function(UpdateEndHour value)? updateEndHour,
+    TResult? Function(UpdateSlider value)? updateHourSlider,
   }) {
     return initial?.call(this);
   }
@@ -1385,9 +1385,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(UpdateHourSlider value)? updateHourSlider,
     TResult Function(UpdateStartHour value)? updateStartHour,
     TResult Function(UpdateEndHour value)? updateEndHour,
+    TResult Function(UpdateSlider value)? updateHourSlider,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1399,152 +1399,6 @@ class _$Initial implements Initial {
 
 abstract class Initial implements FilteringState {
   const factory Initial() = _$Initial;
-}
-
-/// @nodoc
-abstract class _$$UpdateHourSliderCopyWith<$Res> {
-  factory _$$UpdateHourSliderCopyWith(
-          _$UpdateHourSlider value, $Res Function(_$UpdateHourSlider) then) =
-      __$$UpdateHourSliderCopyWithImpl<$Res>;
-  @useResult
-  $Res call({double value});
-}
-
-/// @nodoc
-class __$$UpdateHourSliderCopyWithImpl<$Res>
-    extends _$FilteringStateCopyWithImpl<$Res, _$UpdateHourSlider>
-    implements _$$UpdateHourSliderCopyWith<$Res> {
-  __$$UpdateHourSliderCopyWithImpl(
-      _$UpdateHourSlider _value, $Res Function(_$UpdateHourSlider) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-  }) {
-    return _then(_$UpdateHourSlider(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UpdateHourSlider implements UpdateHourSlider {
-  const _$UpdateHourSlider({required this.value});
-
-  @override
-  final double value;
-
-  @override
-  String toString() {
-    return 'FilteringState.updateHourSlider(value: $value)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateHourSlider &&
-            (identical(other.value, value) || other.value == value));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, value);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateHourSliderCopyWith<_$UpdateHourSlider> get copyWith =>
-      __$$UpdateHourSliderCopyWithImpl<_$UpdateHourSlider>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(double value) updateHourSlider,
-    required TResult Function(int value) updateStartHour,
-    required TResult Function(int value) updateEndHour,
-  }) {
-    return updateHourSlider(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(double value)? updateHourSlider,
-    TResult? Function(int value)? updateStartHour,
-    TResult? Function(int value)? updateEndHour,
-  }) {
-    return updateHourSlider?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateHourSlider,
-    TResult Function(int value)? updateStartHour,
-    TResult Function(int value)? updateEndHour,
-    required TResult orElse(),
-  }) {
-    if (updateHourSlider != null) {
-      return updateHourSlider(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(UpdateHourSlider value) updateHourSlider,
-    required TResult Function(UpdateStartHour value) updateStartHour,
-    required TResult Function(UpdateEndHour value) updateEndHour,
-  }) {
-    return updateHourSlider(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(UpdateHourSlider value)? updateHourSlider,
-    TResult? Function(UpdateStartHour value)? updateStartHour,
-    TResult? Function(UpdateEndHour value)? updateEndHour,
-  }) {
-    return updateHourSlider?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(UpdateHourSlider value)? updateHourSlider,
-    TResult Function(UpdateStartHour value)? updateStartHour,
-    TResult Function(UpdateEndHour value)? updateEndHour,
-    required TResult orElse(),
-  }) {
-    if (updateHourSlider != null) {
-      return updateHourSlider(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UpdateHourSlider implements FilteringState {
-  const factory UpdateHourSlider({required final double value}) =
-      _$UpdateHourSlider;
-
-  double get value;
-  @JsonKey(ignore: true)
-  _$$UpdateHourSliderCopyWith<_$UpdateHourSlider> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1612,9 +1466,9 @@ class _$UpdateStartHour implements UpdateStartHour {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(double value) updateHourSlider,
     required TResult Function(int value) updateStartHour,
     required TResult Function(int value) updateEndHour,
+    required TResult Function(double value, bool stat) updateHourSlider,
   }) {
     return updateStartHour(value);
   }
@@ -1623,9 +1477,9 @@ class _$UpdateStartHour implements UpdateStartHour {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(double value)? updateHourSlider,
     TResult? Function(int value)? updateStartHour,
     TResult? Function(int value)? updateEndHour,
+    TResult? Function(double value, bool stat)? updateHourSlider,
   }) {
     return updateStartHour?.call(value);
   }
@@ -1634,9 +1488,9 @@ class _$UpdateStartHour implements UpdateStartHour {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(double value)? updateHourSlider,
     TResult Function(int value)? updateStartHour,
     TResult Function(int value)? updateEndHour,
+    TResult Function(double value, bool stat)? updateHourSlider,
     required TResult orElse(),
   }) {
     if (updateStartHour != null) {
@@ -1649,9 +1503,9 @@ class _$UpdateStartHour implements UpdateStartHour {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(UpdateHourSlider value) updateHourSlider,
     required TResult Function(UpdateStartHour value) updateStartHour,
     required TResult Function(UpdateEndHour value) updateEndHour,
+    required TResult Function(UpdateSlider value) updateHourSlider,
   }) {
     return updateStartHour(this);
   }
@@ -1660,9 +1514,9 @@ class _$UpdateStartHour implements UpdateStartHour {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(UpdateHourSlider value)? updateHourSlider,
     TResult? Function(UpdateStartHour value)? updateStartHour,
     TResult? Function(UpdateEndHour value)? updateEndHour,
+    TResult? Function(UpdateSlider value)? updateHourSlider,
   }) {
     return updateStartHour?.call(this);
   }
@@ -1671,9 +1525,9 @@ class _$UpdateStartHour implements UpdateStartHour {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(UpdateHourSlider value)? updateHourSlider,
     TResult Function(UpdateStartHour value)? updateStartHour,
     TResult Function(UpdateEndHour value)? updateEndHour,
+    TResult Function(UpdateSlider value)? updateHourSlider,
     required TResult orElse(),
   }) {
     if (updateStartHour != null) {
@@ -1757,9 +1611,9 @@ class _$UpdateEndHour implements UpdateEndHour {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(double value) updateHourSlider,
     required TResult Function(int value) updateStartHour,
     required TResult Function(int value) updateEndHour,
+    required TResult Function(double value, bool stat) updateHourSlider,
   }) {
     return updateEndHour(value);
   }
@@ -1768,9 +1622,9 @@ class _$UpdateEndHour implements UpdateEndHour {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(double value)? updateHourSlider,
     TResult? Function(int value)? updateStartHour,
     TResult? Function(int value)? updateEndHour,
+    TResult? Function(double value, bool stat)? updateHourSlider,
   }) {
     return updateEndHour?.call(value);
   }
@@ -1779,9 +1633,9 @@ class _$UpdateEndHour implements UpdateEndHour {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(double value)? updateHourSlider,
     TResult Function(int value)? updateStartHour,
     TResult Function(int value)? updateEndHour,
+    TResult Function(double value, bool stat)? updateHourSlider,
     required TResult orElse(),
   }) {
     if (updateEndHour != null) {
@@ -1794,9 +1648,9 @@ class _$UpdateEndHour implements UpdateEndHour {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(UpdateHourSlider value) updateHourSlider,
     required TResult Function(UpdateStartHour value) updateStartHour,
     required TResult Function(UpdateEndHour value) updateEndHour,
+    required TResult Function(UpdateSlider value) updateHourSlider,
   }) {
     return updateEndHour(this);
   }
@@ -1805,9 +1659,9 @@ class _$UpdateEndHour implements UpdateEndHour {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(UpdateHourSlider value)? updateHourSlider,
     TResult? Function(UpdateStartHour value)? updateStartHour,
     TResult? Function(UpdateEndHour value)? updateEndHour,
+    TResult? Function(UpdateSlider value)? updateHourSlider,
   }) {
     return updateEndHour?.call(this);
   }
@@ -1816,9 +1670,9 @@ class _$UpdateEndHour implements UpdateEndHour {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(UpdateHourSlider value)? updateHourSlider,
     TResult Function(UpdateStartHour value)? updateStartHour,
     TResult Function(UpdateEndHour value)? updateEndHour,
+    TResult Function(UpdateSlider value)? updateHourSlider,
     required TResult orElse(),
   }) {
     if (updateEndHour != null) {
@@ -1834,5 +1688,160 @@ abstract class UpdateEndHour implements FilteringState {
   int get value;
   @JsonKey(ignore: true)
   _$$UpdateEndHourCopyWith<_$UpdateEndHour> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateSliderCopyWith<$Res> {
+  factory _$$UpdateSliderCopyWith(
+          _$UpdateSlider value, $Res Function(_$UpdateSlider) then) =
+      __$$UpdateSliderCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double value, bool stat});
+}
+
+/// @nodoc
+class __$$UpdateSliderCopyWithImpl<$Res>
+    extends _$FilteringStateCopyWithImpl<$Res, _$UpdateSlider>
+    implements _$$UpdateSliderCopyWith<$Res> {
+  __$$UpdateSliderCopyWithImpl(
+      _$UpdateSlider _value, $Res Function(_$UpdateSlider) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+    Object? stat = null,
+  }) {
+    return _then(_$UpdateSlider(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as double,
+      stat: null == stat
+          ? _value.stat
+          : stat // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateSlider implements UpdateSlider {
+  const _$UpdateSlider({required this.value, required this.stat});
+
+  @override
+  final double value;
+  @override
+  final bool stat;
+
+  @override
+  String toString() {
+    return 'FilteringState.updateHourSlider(value: $value, stat: $stat)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateSlider &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.stat, stat) || other.stat == stat));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value, stat);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateSliderCopyWith<_$UpdateSlider> get copyWith =>
+      __$$UpdateSliderCopyWithImpl<_$UpdateSlider>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int value) updateStartHour,
+    required TResult Function(int value) updateEndHour,
+    required TResult Function(double value, bool stat) updateHourSlider,
+  }) {
+    return updateHourSlider(value, stat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int value)? updateStartHour,
+    TResult? Function(int value)? updateEndHour,
+    TResult? Function(double value, bool stat)? updateHourSlider,
+  }) {
+    return updateHourSlider?.call(value, stat);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int value)? updateStartHour,
+    TResult Function(int value)? updateEndHour,
+    TResult Function(double value, bool stat)? updateHourSlider,
+    required TResult orElse(),
+  }) {
+    if (updateHourSlider != null) {
+      return updateHourSlider(value, stat);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(UpdateStartHour value) updateStartHour,
+    required TResult Function(UpdateEndHour value) updateEndHour,
+    required TResult Function(UpdateSlider value) updateHourSlider,
+  }) {
+    return updateHourSlider(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial value)? initial,
+    TResult? Function(UpdateStartHour value)? updateStartHour,
+    TResult? Function(UpdateEndHour value)? updateEndHour,
+    TResult? Function(UpdateSlider value)? updateHourSlider,
+  }) {
+    return updateHourSlider?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(UpdateStartHour value)? updateStartHour,
+    TResult Function(UpdateEndHour value)? updateEndHour,
+    TResult Function(UpdateSlider value)? updateHourSlider,
+    required TResult orElse(),
+  }) {
+    if (updateHourSlider != null) {
+      return updateHourSlider(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateSlider implements FilteringState {
+  const factory UpdateSlider(
+      {required final double value, required final bool stat}) = _$UpdateSlider;
+
+  double get value;
+  bool get stat;
+  @JsonKey(ignore: true)
+  _$$UpdateSliderCopyWith<_$UpdateSlider> get copyWith =>
       throw _privateConstructorUsedError;
 }

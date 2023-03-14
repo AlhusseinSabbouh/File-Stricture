@@ -16,8 +16,8 @@ class ColorManager {
   static const Color primaryOrange = Color(0xffFF3333);
   static const Color darkGrey = Color(0xff666666);
   static const Color grey = Color(0xff052330);
-  static const Color lightGrey = Color(0xff666666);
-  static const Color black = Color(0xff737477);
+  static const Color lightGrey = Color.fromARGB(255, 213, 211, 211);
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
   static const Color white = Color(0xffFFFFFF);
   static const Color red = Color(0xffEA4335);
 

@@ -33,15 +33,18 @@ class SetNewPasswordPage extends StatelessWidget {
   void listenerMethod(context, state) {
     state.maybeWhen(
         passwordChanging: () {
-          showPopup(context, DialogType.loading, "Password Changing");
+          showPopup(context,
+              dialogType: DialogType.loading, msg: "Password Changing");
         },
         passwordsNotSame: () {
           dismissDialog(context);
-          showPopup(context, DialogType.error, "Password is not same");
+          showPopup(context,
+              dialogType: DialogType.error, msg: "Password is not same");
         },
         changePasswordError: () {
           dismissDialog(context);
-          showPopup(context, DialogType.error, "Change Password Error");
+          showPopup(context,
+              dialogType: DialogType.error, msg: "Change Password Error");
         },
         changePasswordDone: () {
           dismissDialog(context);

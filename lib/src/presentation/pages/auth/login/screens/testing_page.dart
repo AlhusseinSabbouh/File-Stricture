@@ -135,3 +135,37 @@ return ListView.builder(
 
 
 */
+
+
+ // SliverAppBar(
+            //   backgroundColor: Color.fromARGB(255, 100, 8, 74),
+            //   pinned: true,
+            //   expandedHeight: 150,
+            //   floating: false,
+            //   bottom: PreferredSize(
+            //     preferredSize: Size.fromHeight(20),
+            //     child: Container(
+            //         decoration: BoxDecoration(
+            //             color: Colors.white,
+            //             borderRadius: BorderRadius.only(
+            //                 topLeft: Radius.circular(20),
+            //                 topRight: Radius.circular(20))),
+            //         width: context.width,
+            //         child: Center(
+            //             child: Text(
+            //           "hussine",
+            //           style: TextStyle(color: Colors.black),
+            //         ))),
+            //   ),
+            //   flexibleSpace: FlexibleSpaceBar(
+            //     background: Container(
+            //       color: Colors.red,
+            //       child: Center(
+            //         child: Text(
+            //           "Welcome",
+            //           style: TextStyle(color: Colors.white),
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),

@@ -12,5 +12,3 @@ class IsMoreData extends ValueObject<ReservationValueFailure, int> {
   }
   const IsMoreData._(this.value);
 }
-
-class A {}

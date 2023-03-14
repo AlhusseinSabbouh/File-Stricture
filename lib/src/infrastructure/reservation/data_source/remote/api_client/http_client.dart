@@ -10,18 +10,21 @@ import 'package:line_up/src/infrastructure/reservation/models/request/get_home_p
 import 'package:line_up/src/infrastructure/reservation/models/response/complete_reservatio_response.dart';
 import 'package:line_up/src/infrastructure/reservation/models/response/get_home_page_data_dto.dart';
 
-const String reservationDataURL = "www.hussein.com";
+//? "www.holcim.com/home"
+
+const String reservationDataURL = "www.holcim.com";
 
 class ReservationDataHttpClient {
   int y = 0;
-  final String getHomePageDataPath = "";
-  // Response response = Response("", 1);
+  final String getHomePageDataPath = "/home";
 
   Future<ReservationResponseComplete> getHomePageData(
       ReservationRequest reservationRequest) async {
     var client = http.Client();
     try {
       late Response response;
+      await Future.delayed(const Duration(seconds: 1));
+
       // var response =
       //     await client.get(Uri.https(reservationDataURL, getHomePageDataPath));
       if (y > 1) {

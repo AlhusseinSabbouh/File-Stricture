@@ -38,12 +38,12 @@ class LoginPage extends StatelessWidget {
     state.maybeWhen(
         loginError: (authFailure) {
           dismissDialog(context);
-          showPopup(context, DialogType.error, "LoginError");
+          showPopup(context, dialogType: DialogType.error, msg: "LoginError");
         },
         logging: () async {
           authBloc.add(const AuthEvent.validateLoginPageKey());
           if (authBloc.authBlocKeyLoginPage.currentState?.validate() ?? false) {
-            showPopup(context, DialogType.loading, "Logging");
+            showPopup(context, dialogType: DialogType.loading, msg: "Logging");
           }
         },
         loginDone: () {

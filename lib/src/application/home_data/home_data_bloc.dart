@@ -29,7 +29,6 @@ class HomeDataBloc extends Bloc<HomeDataEvent, HomeDataState> {
           var x =
               await reservationRepo.getAllmyReservation(user: User(), page: i);
           emit(const HomeDataState.loadingNewData());
-          await Future.delayed(const Duration(seconds: 2));
           x.fold(
             (l) {
               print(l);
@@ -39,10 +38,14 @@ class HomeDataBloc extends Bloc<HomeDataEvent, HomeDataState> {
               print(r);
               data.addAll(r.listOfReservation);
               emit(HomeDataState.newDataLoaded(data));
+              emit(const HomeDataState.indicatorSetted(
+                  indicator: Indicator.enable));
               print("hhhhhhhhhhhhhhhhhhhhhhhh");
               print(r.isMoreData);
               if (r.isMoreData.getOrNull() == 0) {
                 emit(const HomeDataState.endOfDate());
+                emit(const HomeDataState.indicatorSetted(
+                    indicator: Indicator.data));
                 endOfDataTrigger = true;
               }
             },
@@ -68,6 +71,12 @@ class HomeDataBloc extends Bloc<HomeDataEvent, HomeDataState> {
         emit(HomeDataState.indicatorSetted(indicator: indicator));
       },
     );
+  }
+  void reset() {
+    data = [];
+    i = 0;
+    indicator = Indicator.enable;
+    endOfDataTrigger = false;
   }
 }
 

@@ -139,6 +139,22 @@ class TitleSmallText extends StatelessWidget {
   }
 }
 
+class CustomTitleSmallText extends StatelessWidget {
+  final String text;
+
+  const CustomTitleSmallText(this.text, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AutoSizeText(
+      text,
+      maxLines: 1,
+      style:
+          Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.black),
+    );
+  }
+}
+
 // ! Body
 class BodyLargeText extends StatelessWidget {
   final String text;
@@ -180,6 +196,22 @@ class BodySmallText extends StatelessWidget {
       text,
       maxLines: 1,
       style: Theme.of(context).textTheme.bodySmall,
+    );
+  }
+}
+
+class CustomBodySmallText extends StatelessWidget {
+  final String text;
+
+  const CustomBodySmallText(this.text, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AutoSizeText(
+      text,
+      maxLines: 1,
+      style:
+          Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
     );
   }
 }

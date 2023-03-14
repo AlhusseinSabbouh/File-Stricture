@@ -14,6 +14,8 @@ import 'package:line_up/src/domain/reservation/repo/reservation.dart';
 import 'package:line_up/src/infrastructure/reservation/models/request/get_home_page_data_request_dto.dart';
 import 'package:line_up/src/infrastructure/reservation/models/response/get_home_page_data_dto.dart';
 
+//to domain and from domain should contain all the attribute that we want
+
 class ReservationDto {
   ReservationRequest fromDomain(User user, int page) {
     return ReservationRequest(userId: user.id.toString(), page: page);

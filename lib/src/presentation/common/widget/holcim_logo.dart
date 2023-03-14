@@ -11,7 +11,7 @@ class HolcimLogo extends StatelessWidget {
         if (context.width > 400) {
           return SizedBox(
             width: 200,
-            height: context.height * 0.12,
+            height: context.height * 0.2,
             child: const Image(
               fit: BoxFit.fill,
               image: AssetImage("assets/images/Holcim_Logo.png"),
@@ -19,8 +19,8 @@ class HolcimLogo extends StatelessWidget {
           );
         } else {
           return SizedBox(
-            width: 200,
-            height: context.height * 0.12,
+            width: context.width * 0.3,
+            height: context.height * 0.2,
             child: const Image(
               fit: BoxFit.fill,
               image: AssetImage("assets/images/Holcim_Logo.png"),

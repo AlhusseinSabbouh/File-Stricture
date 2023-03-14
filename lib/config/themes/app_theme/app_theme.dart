@@ -43,7 +43,7 @@ class AppTheme {
 
   static ThemeData get darkTheme {
     return ThemeData.dark().copyWith(
-        textTheme: selectTextTheme(TextThemeType.large)
+        textTheme: selectTextTheme(TextThemeType.small)
         // TextTheme(
         //     displayLarge: getBoldStyle(
         //       appColors: AppColors.primaryOrange,
@@ -127,8 +127,12 @@ TextTheme smallTextTheme() => TextTheme(
     // error message
     labelSmall: getLightStyle(
         appColors: AppColors.primaryOrange, fontSize: FontSizeManager.s16),
-    bodySmall:
-        getLightStyle(appColors: AppColors.red, fontSize: FontSizeManager.s16),
+    bodySmall: getLightStyle(
+        appColors: AppColors.black, fontSize: FontSizeManager.s16),
+    titleSmall: getMediumStyle(
+      appColors: AppColors.white,
+      fontSize: FontSizeManager.s18,
+    ),
 
     //buttom login
     labelMedium: getMediumStyle(

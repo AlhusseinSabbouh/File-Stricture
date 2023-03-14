@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 extension MediaQueryValues on BuildContext {
   double get height => MediaQuery.of(this).size.height;
   double get width => MediaQuery.of(this).size.width;
+  bool get isOriented => height < width;
 
   double widthDecrement(double value) {
     return value * width / 100.0;

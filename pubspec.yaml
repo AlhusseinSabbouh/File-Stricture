@@ -52,6 +52,7 @@ dependencies:
 
   interval_time_picker: ^2.0.0+5
   day_night_time_picker: ^1.2.0
+  lottie: ^2.2.0
 
   auto_size_text: ^3.0.0
   awesome_dialog: ^3.0.2
@@ -109,6 +110,10 @@ flutter:
     - assets/images/Holcim_Logo.png
     - assets/fexture/reservatio_response.json
     - assets/fexture/reservatio_response2.json
+    - assets/animation/warning.json
+    - assets/animation/splash_lottie.json
+    - assets/animation/loading.json
+    - assets/animation/loading2.json
 
 
 

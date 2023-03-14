@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:line_up/config/dependency_injection/di.dart';
 import 'package:line_up/line_up_app.dart';
 
+import 'src/presentation/common/widget/lottie_loading.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -10,6 +12,7 @@ void main() async {
   await initDIApp();
   initFilterPage();
   // initAuthPages();
+  var a = LottieLoading();
 
   Bloc.observer = const AppBlocObserver();
   runApp(const LineUpApp());
